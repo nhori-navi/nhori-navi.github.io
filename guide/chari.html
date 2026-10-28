@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
+<meta name="robots" content="noindex, nofollow">
+<title>ChariMiru｜ミル シリーズ</title>
+<meta name="description" content="坂の上り下りを見てルートを決め、走った記録がバーチャルの旅につながる自転車マップ（試作）。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ChariMiru｜ミル シリーズ">
+<meta property="og:description" content="坂の上り下りを見てルートを決め、走った記録がバーチャルの旅につながる自転車マップ（試作）。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../favicon-48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3">
+<script src="../site.js?v=3" defer></script>
+</head>
+<body class="app-chari">
+<header class="site"><div class="wrap narrow">
+  <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
+</div></header>
+
+<main class="wrap narrow">
+  <p class="warn">走りながら画面を操作しないでください。止まってから操作してください。</p>
+  <div class="hero">
+    <div class="app-title"><div class="mark big">チ</div><h1>ChariMiru<span class="yomi">チャリミル・自転車で走る・坂と記録</span></h1></div>
+    <ul class="scenes">
+      <li>坂の上り下りを見てから、ルートを決められたら</li>
+      <li>着く時刻を、自分の走る速さで知れたら</li>
+      <li>走った距離が、東海道や地球一周につながったら</li>
+    </ul>
+    <p class="lead">ChariMiru は、坂の断面図を見ながらルートを選べる自転車のマップです。走った記録は積み上がって、東海道・シルクロード・地球一周…と、バーチャルの長い旅につながります。</p>
+    <div class="btns"><a class="btn main" href="../chari/">アプリを開く</a></div>
+  </div>
+
+  <p class="pc-note">パソコンでは、ルート作り・坂の断面図・共有リンク・走った記録の表示が使えます。走るときはスマホで使ってください。</p>
+
+  <section>
+    <h2>楽しみ方</h2>
+    <div class="box"><ol class="steps">
+      <li>アプリを開いて、自転車の種類（ロード・クロス・街乗り・電動）と好みを選びます。</li>
+      <li>出発地・目的地（経由地も）を決めると、ルートと坂の断面図、着く時刻の目安が出ます。共有リンクで人に送れます。</li>
+      <li>「▶ 走る」で走行モード。曲がり角や坂の手前を声で案内し、速さ・距離を記録します。</li>
+      <li>走った記録は履歴に残り、合計の距離がバーチャルの旅を進めます。マスの塗りつぶし・峠のスタンプ・バッジもあります。</li>
+    </ol></div>
+  </section>
+
+  <section>
+    <h2>できること</h2>
+    <div class="box"><ul class="plain">
+      <li>ルート検索（出発・経由・目的、自転車の種類と好み）と、坂の断面図・勾配の色分け</li>
+      <li>着く時刻の目安（坂の分も考え、走った記録から自分の速さを学ぶ）</li>
+      <li>ルートの共有リンク、GPX の書き出し・読み込み</li>
+      <li>走行モード：地図いっぱいの表示、自動一時停止、曲がり角と坂の声の案内、外れたら引き直し</li>
+      <li>走った記録（総走行距離・月ごとのグラフ）、マス塗り・峠のスタンプ帳・バッジ</li>
+      <li>バーチャルの長い旅（東海道 → ルート66 → シルクロード → シベリア鉄道 → 日本一周 → 地球一周 → 月）</li>
+      <li>心拍・スピード・ケイデンスのセンサー（Bluetooth。対応するブラウザだけ）</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>これから</h2>
+    <div class="box"><ul class="tags">
+      <li><span class="tag wip">実装中</span><span>公開に向けた準備（ルート検索のしくみの見直し）</span></li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>使う端末と許可</h2>
+    <div class="box"><ul class="plain">
+      <li>スマホ向けです。Android の Chrome で確かめています。iPhone でも使えます（センサーは対応するブラウザが必要です）。</li>
+      <li>位置情報：走った道と速さを記録し、案内するために使います。</li>
+      <li>画面のスリープ防止：走っている間に画面が消えないようにします。</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>できないこと・ずれること</h2>
+    <div class="box"><ul class="plain">
+      <li>ルートは地図データ（OpenStreetMap）から計算しています。走りにくい道が入ることがあります。</li>
+      <li>アプリを開いたまま、画面を点けたままでないと記録と案内が止まります。</li>
+      <li>着く時刻は目安です。信号や向かい風は考えていません。</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>記録について</h2>
+    <div class="box"><ul class="plain">
+      <li>走った記録・設定は、使っている端末の中にだけ保存します。GPX の書き出しで控えを取れます。</li>
+      <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>出典</h2>
+    <p class="note">地図：Mapbox／ルート：OpenRouteService、© OpenStreetMap contributors／標高：国土地理院</p>
+    <div class="btns"><a class="btn main" href="../chari/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap narrow">
+  <nav><a href=".././">TOP</a><a href="../notes.html">ご利用にあたって</a><a href="../policy.html">プライバシーポリシー</a><a href="../notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
+</div></footer>
+</body>
+</html>

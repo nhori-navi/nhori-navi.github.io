@@ -3,41 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
 <meta name="robots" content="noindex, nofollow">
 <title>TenMiru｜ミル シリーズ</title>
-<meta name="description" content="見上げた飛行機が、どこへ行くのか分かる。月や星座も。">
-<meta name="theme-color" content="#faf8f4">
-<link rel="stylesheet" href="../style.css?v=2">
-<script src="../site.js?v=1" defer></script>
+<meta name="description" content="見上げた飛行機の行き先と機種が分かる。月・惑星・星座も重ねて、いつもの空を楽しむ。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TenMiru｜ミル シリーズ">
+<meta property="og:description" content="見上げた飛行機の行き先と機種が分かる。月・惑星・星座も重ねて、いつもの空を楽しむ。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../favicon-48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3">
+<script src="../site.js?v=3" defer></script>
 </head>
 <body class="app-ten">
 <header class="site"><div class="wrap narrow">
-  <a class="back" href="../">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
+  <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
 </div></header>
 
 <main class="wrap narrow">
   <div class="hero">
-    <div class="app-title"><div class="mark big">テ</div><h1>TenMiru</h1></div>
+    <div class="app-title"><div class="mark big"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><h1>TenMiru<span class="yomi">テンミル・見上げる・飛行機と星</span></h1></div>
     <ul class="scenes">
       <li>頭の上を通った飛行機が、どこへ行くのか分かったら</li>
       <li>「あと1分で真上」と知って、空を見上げられたら</li>
       <li>夜空の月や星座の名前を、その場で言えたら</li>
     </ul>
-    <p class="lead">行き先や機種が分かると、いつもの空が少し広く感じられます。夜は月や惑星、星座も一緒に楽しめます。</p>
+    <p class="lead">TenMiru は、まわりを飛んでいる飛行機の行き先や機種が分かるアプリです。スマホを空に向けると、飛行機や月・星・星座の名前が重なります。行き先が分かると、いつもの空が少し広く感じられます。</p>
     <div class="btns"><a class="btn main" href="../sora/">アプリを開く</a></div>
-    <p class="note">アプリの画面には、まだ旧名の「SoraMiru」と表示されます。</p>
   </div>
 
-  <p class="pc-note">パソコンでも、地図・飛行機の一覧・図鑑・今日の空などは見られます。「空に向ける」やキャッチは、向きのセンサーがあるスマホで使えます。</p>
+  <p class="pc-note">パソコンでも、地図・飛行機の一覧・図鑑・今日の空・よその空などが見られます。「空に向ける」やキャッチは、向きのセンサーがあるスマホで使えます。</p>
 
   <section>
     <h2>楽しみ方</h2>
     <div class="box"><ol class="steps">
-      <li>アプリを開いて、位置情報の利用を許可します。</li>
-      <li>地図と一覧に、まわりを飛んでいる飛行機が出ます。気になる機体を押すと、行き先や機種、写真が見られます。</li>
+      <li>アプリを開いて、位置情報の利用を許可します。地図と一覧に、まわりを飛んでいる飛行機が出ます。気になる機体を押すと、行き先や機種、写真が見られます。</li>
       <li>「空に向ける」を押してスマホを空にかざすと、飛行機や月・星の名前が画面に重なります。</li>
       <li>照準の円に飛行機を2秒入れ続けると「キャッチ」。図鑑に記録され、点数やバッジがもらえます。</li>
-      <li>「あと1:40で真上付近」と出たら、外に出て見上げてみてください。</li>
+      <li>「あと1:40で真上付近」と出たら、外に出て見上げてみてください。夜は星座の絵も重なります。</li>
     </ol></div>
   </section>
 
@@ -46,22 +53,20 @@
     <div class="box"><ul class="plain">
       <li>まわりの飛行機の地図と一覧（行き先・機種・写真。軍用機も）</li>
       <li>もうすぐ真上を通る飛行機のカウントダウン</li>
-      <li>スマホを空に向けると、飛行機・月・惑星・明るい星・星座の名前が重なる（カメラの映像にも）</li>
-      <li>キャッチ、レア度と点数、バッジ、機種の図鑑</li>
+      <li>スマホを空に向けると、飛行機・月・惑星・明るい星・星座（絵つき）の名前が重なる（カメラの映像にも）</li>
+      <li>キャッチ、レア度と点数、新しい都市・路線の印、バッジ、機種の図鑑</li>
       <li>今日の空の記録と、人に見せられるシェアカード</li>
       <li>国際宇宙ステーションの位置と、見える時刻の予報</li>
-      <li>今夜の空（月の出入り・月齢）、その便の窓から見える景色</li>
-      <li>記録の書き出し・読み込み</li>
+      <li>よその空：地図で選んだ世界の空港や町の空を眺めて、別のノートに集める</li>
+      <li>夜は暗い画面、ホーム画面に追加、記録の書き出し・読み込み</li>
     </ul></div>
   </section>
 
   <section>
     <h2>これから</h2>
     <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span>iPhone での動作の確認</li>
-      <li><span class="tag plan">予定</span>パソコンで開いたときの案内を分かりやすく</li>
-      <li><span class="tag plan">予定</span>現在地が粗いとき・取れないときの扱い（地図で場所を選べるように）</li>
-      <li><span class="tag plan">予定</span>ホーム画面に追加して、アプリのように使えるように</li>
+      <li><span class="tag wip">実装中</span><span>iPhone での動作の確認</span></li>
+      <li><span class="tag plan">予定</span><span>名前の見直し（アプリの画面には、まだ旧名の「SoraMiru」と表示されます）</span></li>
     </ul></div>
   </section>
 
@@ -82,28 +87,29 @@
       <li>行き先は、便名から調べた共同データの推定です。経由便などで違うことがあります。</li>
       <li>方角はスマホのセンサー任せなので、数度〜十数度ずれることがあります。月や明るい星で合わせ直せます。</li>
       <li>星座は、雲で見えないときも計算した位置に表示します。</li>
-      <li>iPhone は振動に対応していないので、知らせは画面の色だけです。</li>
     </ul></div>
   </section>
 
   <section>
     <h2>記録について</h2>
     <div class="box"><ul class="plain">
-      <li>図鑑・キャッチ・バッジ・今日の空などの記録は、使っている端末の中にだけ保存します。</li>
-      <li>アプリの画面のいちばん下の「記録の保存」で、ファイルへの書き出しと読み込みができます。機種変更のときなどに使ってください。</li>
+      <li>図鑑・キャッチ・バッジ・今日の空・よその空ノートなどの記録は、使っている端末の中にだけ保存します。</li>
+      <li>設定の「記録の保存」で、ファイルへの書き出しと読み込みができます。</li>
+      <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
     </ul></div>
   </section>
 
   <section>
     <h2>出典</h2>
-    <p class="note">機体データ：adsb.lol（ODbL）／行き先：Virtual Radar Server（CC0）／写真：Planespotters.net（撮影者の表示つき）／地名：国土地理院／天体の計算：Astronomy Engine／宇宙ステーションの軌道：satellite.js、CelesTrak、wheretheiss.at／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／地図：Mapbox、© OpenStreetMap contributors</p>
+    <p class="note">機体データ：adsb.lol（ODbL）／行き先：Virtual Radar Server（CC0）／写真：Planespotters.net（撮影者の表示つき）／地名：国土地理院、© OpenStreetMap contributors（よその空）／天体の計算：Astronomy Engine／宇宙ステーションの軌道：satellite.js、CelesTrak、wheretheiss.at／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／星座絵：Johan Meuris（Stellarium、Free Art License）／地図：Mapbox</p>
+    <div class="btns"><a class="btn main" href="../sora/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
   </section>
-
-  <div class="btns"><a class="btn main" href="../sora/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
 </main>
 
 <footer class="site"><div class="wrap narrow">
-  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリです。プライバシーポリシーは準備中です。</p>
+  <nav><a href=".././">TOP</a><a href="../notes.html">ご利用にあたって</a><a href="../policy.html">プライバシーポリシー</a><a href="../notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
 </div></footer>
 </body>
 </html>

@@ -3,42 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
 <meta name="robots" content="noindex, nofollow">
 <title>KomuMiru｜ミル シリーズ</title>
-<meta name="description" content="渋滞のとき、高速のままか、降りるかを比べて決める。">
-<meta name="theme-color" content="#faf8f4">
-<link rel="stylesheet" href="../style.css?v=2">
-<script src="../site.js?v=1" defer></script>
+<meta name="description" content="渋滞のとき、高速のままか、降りるかを比べて決めるカーナビ（試作）。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KomuMiru｜ミル シリーズ">
+<meta property="og:description" content="渋滞のとき、高速のままか、降りるかを比べて決めるカーナビ（試作）。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../favicon-48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3">
+<script src="../site.js?v=3" defer></script>
 </head>
 <body class="app-komu">
 <header class="site"><div class="wrap narrow">
-  <a class="back" href="../">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
+  <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
 </div></header>
 
 <main class="wrap narrow">
   <p class="warn">運転中は操作しないでください。操作は停車中か、同乗の方にお願いします。</p>
-
   <div class="hero">
-    <div class="app-title"><div class="mark big">コ</div><h1>KomuMiru</h1></div>
+    <div class="app-title"><div class="mark big"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><h1>KomuMiru<span class="yomi">コムミル・車で走る・渋滞を比べる</span></h1></div>
     <ul class="scenes">
       <li>渋滞の中で「降りたほうが早い？」がすぐ分かったら</li>
       <li>乗るICを、その日の混み具合で選べたら</li>
       <li>少し遠回りでも、結局早く着く道を選べたら</li>
     </ul>
-    <p class="lead">KomuMiru は、いくつかの道を同時に計算して、どれがいちばん早く着きそうかを比べて見せるカーナビです。遠回りの分も差し引いて考えます。</p>
+    <p class="lead">KomuMiru は、いくつかの道を同時に計算して、どれがいちばん早く着きそうかを比べて見せるカーナビです。遠回りの分や、右折・信号の多さも差し引いて考えます。</p>
     <div class="btns"><a class="btn main" href="../navi/">アプリを開く</a></div>
   </div>
 
   <p class="pc-note">パソコンでは、出発前の下調べ（まわりの渋滞の様子や、ルートの比べ方）に使えます。走りながら使うのはスマホです。</p>
 
   <section>
-    <h2>使い方</h2>
+    <h2>楽しみ方</h2>
     <div class="box"><ol class="steps">
       <li>アプリを開いて位置情報を許可し、目的地を検索して「ナビ開始」を押します。</li>
       <li>まわりの道が渋滞の色で塗られ、曲がり角を声で案内します。</li>
       <li>数分ごとに最新の渋滞で計算し直し、早いルートが見つかると声で知らせます。切り替えるかどうかは自分で決められます。</li>
       <li>渋滞にはまったら（同乗の方が）「判定」を押します。高速の上なら「このまま／次のICで降りる／降りて乗り直す」を、一般道なら「どのICから乗るか」や渋滞を避ける道を比べます。</li>
-      <li>高速を走っている間は、この先のIC・JCT・SA・PAと、その間の渋滞の長さが一覧で出ます。</li>
     </ol></div>
   </section>
 
@@ -46,24 +53,22 @@
     <h2>できること</h2>
     <div class="box"><ul class="plain">
       <li>まわりのすべての道の渋滞を色で表示</li>
-      <li>目的地の検索（住所・駅名・施設）と、地図での指定</li>
+      <li>目的地の検索（住所・駅名・施設）、地図での指定、お気に入り、経由地</li>
       <li>曲がり角の声の案内。ルートを外れたら自動で探し直し</li>
-      <li>数分ごとの比べ直しと、早いルートの提案（遠回り1kmを何分の損とみなすかも選べる）</li>
+      <li>数分ごとの比べ直しと、早いルートの提案（遠回りや運転の負担も考える）</li>
       <li>「判定」：このまま／降りて一般道／降りて乗り直す／乗るICの比較</li>
       <li>ハイウェイモード：この先のIC・JCT・SA・PAと到着予定時刻、その間の渋滞</li>
       <li>ルート上の事故・規制の知らせ</li>
-      <li>よく使う出口（IC）の登録</li>
-      <li>使い方ナビ（次にやることを吹き出しで案内）</li>
-      <li>Android のホーム画面に追加して、アプリのように使える</li>
+      <li>夜は暗い画面、地図の向き（北が上／進む向きが上／3D）、ホーム画面に追加</li>
     </ul></div>
   </section>
 
   <section>
     <h2>これから</h2>
     <div class="box"><ul class="tags">
-      <li><span class="tag plan">予定</span>出発時刻をずらしたときの所要時間の比較</li>
-      <li><span class="tag plan">予定</span>有料道路を使わない場合との比較</li>
-      <li><span class="tag plan">予定</span>走った記録をためて、自分だけの抜け道を育てる</li>
+      <li><span class="tag plan">予定</span><span>走った記録と、書き出し・読み込み</span></li>
+      <li><span class="tag plan">予定</span><span>出発時刻をずらしたときの所要時間の比較</span></li>
+      <li><span class="tag plan">予定</span><span>有料道路を使わない場合との比較</span></li>
     </ul></div>
   </section>
 
@@ -80,31 +85,31 @@
     <h2>できないこと・ずれること</h2>
     <div class="box"><ul class="plain">
       <li>渋滞の情報と所要時間は Mapbox の予測です。実際とずれることがあります。</li>
-      <li>高速の出口・入口は、地図データ（OpenStreetMap）から推定しています。載っていないICや新しいICは拾えないことがあります。よく使う出口は登録できます。</li>
+      <li>高速の出口・入口は、地図データ（OpenStreetMap）から推定しています。載っていないICや新しいICは拾えないことがあります。</li>
       <li>アプリを開いたまま、画面を点けたままでないと位置の更新が止まります。電池を多く使うので、充電しながらの利用をおすすめします。</li>
       <li>SA・PAの駐車場の混み具合や、ガソリンスタンドの営業状況は分かりません。</li>
-      <li>1回の起動で使える計算の回数に上限があります。長い渋滞では上限に近づくことがあります。</li>
     </ul></div>
   </section>
 
   <section>
     <h2>記録について</h2>
     <div class="box"><ul class="plain">
-      <li>登録した出口と設定は、使っている端末の中にだけ保存します。</li>
-      <li>登録した出口は、書き出し・読み込みで別の端末へ移せます。</li>
+      <li>登録した出口・お気に入りと設定は、使っている端末の中にだけ保存します。</li>
+      <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
     </ul></div>
   </section>
 
   <section>
     <h2>出典</h2>
-    <p class="note">地図・渋滞・経路・検索：Mapbox／IC・料金所・SA・PA：OpenStreetMap、© OpenStreetMap contributors</p>
+    <p class="note">地図・渋滞・経路・検索：Mapbox／IC・料金所・SA・PA：© OpenStreetMap contributors</p>
+    <div class="btns"><a class="btn main" href="../navi/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
   </section>
-
-  <div class="btns"><a class="btn main" href="../navi/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
 </main>
 
 <footer class="site"><div class="wrap narrow">
-  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリです。プライバシーポリシーは準備中です。</p>
+  <nav><a href=".././">TOP</a><a href="../notes.html">ご利用にあたって</a><a href="../policy.html">プライバシーポリシー</a><a href="../notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
 </div></footer>
 </body>
 </html>

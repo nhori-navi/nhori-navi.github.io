@@ -3,27 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
 <meta name="robots" content="noindex, nofollow">
 <title>YamaMiru｜ミル シリーズ</title>
-<meta name="description" content="いま見えている山の名前が分かる。見つけた山は図鑑に。">
-<meta name="theme-color" content="#faf8f4">
-<link rel="stylesheet" href="../style.css?v=2">
-<script src="../site.js?v=1" defer></script>
+<meta name="description" content="いる場所から見える山並みと山の名前が分かる。見つけた山を図鑑に集め、今日見えるかも分かる。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YamaMiru｜ミル シリーズ">
+<meta property="og:description" content="いる場所から見える山並みと山の名前が分かる。見つけた山を図鑑に集め、今日見えるかも分かる。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="../favicon-48.png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3">
+<script src="../site.js?v=3" defer></script>
 </head>
 <body class="app-yama">
 <header class="site"><div class="wrap narrow">
-  <a class="back" href="../">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
+  <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
 </div></header>
 
 <main class="wrap narrow">
   <div class="hero">
-    <div class="app-title"><div class="mark big">ヤ</div><h1>YamaMiru</h1></div>
+    <div class="app-title"><div class="mark big"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><h1>YamaMiru<span class="yomi">ヤマミル・眺める・見えている山の名前</span></h1></div>
     <ul class="scenes">
       <li>見えている山の名前が、すぐに分かったら</li>
-      <li>山小屋の夜に、星座が読めたら</li>
+      <li>今日は富士山が見えそうか、朝のうちに分かったら</li>
       <li>登る前に、山頂からの景色を予習できたら</li>
     </ul>
-    <p class="lead">スマホを山に向けると、山の名前が分かります。見つけた山は図鑑に集まっていきます。登らなくても、毎日の景色の中で山と仲よくなれるアプリです。</p>
+    <p class="lead">YamaMiru は、いる場所から見える山並みを描いて、山の名前が分かるアプリです。スマホを山に向けると正面の山が分かり、見つけた山は図鑑に集まっていきます。登らなくても、毎日の景色の中で山と仲よくなれます。</p>
     <div class="btns"><a class="btn main" href="../yama/">アプリを開く</a></div>
   </div>
 
@@ -32,11 +41,10 @@
   <section>
     <h2>楽しみ方</h2>
     <div class="box"><ol class="steps">
-      <li>アプリを開いて位置情報を許可すると、いる場所から見える山並みを計算して描きます。初めての場所では少し時間がかかります。</li>
+      <li>アプリを開いて位置情報を許可すると、いる場所から見える山並みを計算して、画面のいちばん上に描きます。初めての場所では少し時間がかかります。</li>
       <li>山並みの山名を押すと、標高や距離、山の説明が見られます。</li>
-      <li>「向きに合わせる」をオンにしてスマホを山に向けると、正面の山が分かります。山名を中央の線に2秒合わせると、図鑑に入ります。</li>
-      <li>「☀ 今日」で、今日は山が見えそうかの予報と、今日のお題を確かめられます。</li>
-      <li>夜は「🌌 星空」で、山並みの上に昇る星座や月を見られます。</li>
+      <li>「向きに合わせる」を押してスマホを山に向けると、正面の山が分かります。山名を中央の線に2秒合わせると、図鑑に入ります。</li>
+      <li>画面の下の「☀ 今日」で、今日は山が見えそうかの予報と、今日のお題を確かめられます。夜は「🌌 星空」で、山並みの上に昇る星座や月を見られます。</li>
     </ol></div>
   </section>
 
@@ -51,16 +59,16 @@
       <li>山並みの上の星空と、星座や月が山から昇る・沈む時刻</li>
       <li>今日は山が見えそうかの予報、お気に入りの場所、見えた記録のカレンダー</li>
       <li>毎日3つの「今日のお題」</li>
-      <li>記録の書き出し・読み込み</li>
+      <li>ホーム画面に追加、記録の書き出し・読み込み</li>
     </ul></div>
   </section>
 
   <section>
     <h2>これから</h2>
     <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span>カメラの映像から山並みの線を自動で合わせる（実験）</li>
-      <li><span class="tag wip">実装中</span>iPhone での動作の確認</li>
-      <li><span class="tag plan">予定</span>山の一覧を前もって用意して、初めての場所でも早く表示</li>
+      <li><span class="tag wip">実装中</span><span>カメラの映像から山並みの線を自動で合わせる（実験）</span></li>
+      <li><span class="tag wip">実装中</span><span>iPhone での動作の確認</span></li>
+      <li><span class="tag plan">予定</span><span>山の一覧を前もって用意して、初めての場所でも早く表示</span></li>
     </ul></div>
   </section>
 
@@ -81,7 +89,6 @@
       <li>遠くの山は、かすみや雲で見えない日もあります。</li>
       <li>山の名前は Wikidata と OpenStreetMap のデータです。載っていない山や、呼び名の違う山があります。</li>
       <li>方角はスマホのセンサー任せなので、ずれることがあります。画面の補正で合わせられます。</li>
-      <li>現在地の精度が粗いとき（誤差が約1km以上）は、地図で場所を選ぶほうが正確です。</li>
     </ul></div>
   </section>
 
@@ -90,19 +97,21 @@
     <div class="box"><ul class="plain">
       <li>図鑑・お題・見えた記録・お気に入りの場所は、使っている端末の中にだけ保存します。</li>
       <li>図鑑の画面のいちばん下で、ファイルへの書き出しと読み込みができます。</li>
+      <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
     </ul></div>
   </section>
 
   <section>
     <h2>出典</h2>
-    <p class="note">標高：国土地理院／山の名前：Wikidata、OpenStreetMap／山の説明：Wikipedia／天気：Open-Meteo（CC BY 4.0）／天体の計算：Astronomy Engine／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／地図：Mapbox、© OpenStreetMap contributors</p>
+    <p class="note">標高：国土地理院／山の名前：Wikidata、© OpenStreetMap contributors／山の説明：Wikipedia／天気：Open-Meteo（CC BY 4.0）／天体の計算：Astronomy Engine／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／地図：Mapbox</p>
+    <div class="btns"><a class="btn main" href="../yama/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
   </section>
-
-  <div class="btns"><a class="btn main" href="../yama/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
 </main>
 
 <footer class="site"><div class="wrap narrow">
-  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリです。プライバシーポリシーは準備中です。</p>
+  <nav><a href=".././">TOP</a><a href="../notes.html">ご利用にあたって</a><a href="../policy.html">プライバシーポリシー</a><a href="../notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
 </div></footer>
 </body>
 </html>
