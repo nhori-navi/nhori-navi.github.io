@@ -1,22 +1,29 @@
-/* ミル シリーズ 共通の見た目（v2） */
+/* ミル シリーズ 共通の見た目（v3：2026-10-28 6つのアプリ・本物のアイコン・暗い画面） */
 :root{
-  --bg:#faf8f4; --card:#fff; --text:#2b2a28; --sub:#6b6862; --line:#e4e0d8;
-  --ten:#4a7fb5; --yama:#5a8a5e; --michi:#a87b4f; --komu:#c9663f;
+  --bg:#faf8f4; --card:#fff; --text:#2b2a28; --sub:#6b6862; --line:#e4e0d8; --soft:#f3f0ea;
+  /* アプリの色（アプリの中の色にそろえ、文字にしても読める濃さに） */
+  --michi:#1e8a4c; --megu:#7a5c8e; --ten:#2f68b8; --yama:#3f7a45; --komu:#c9663f; --chari:#3d8b6e;
   --app:#8a847a;
 }
-.app-ten{--app:var(--ten)} .app-yama{--app:var(--yama)} .app-michi{--app:var(--michi)} .app-komu{--app:var(--komu)}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#1c1f1e; --card:#262b29; --text:#eef1ef; --sub:#b4bcb7; --line:#3a413e; --soft:#2d3330;
+    --michi:#5ccf8a; --megu:#c4a3da; --ten:#86b4ef; --yama:#8cc493; --komu:#f0a27e; --chari:#7fcdb0}
+}
+.app-michi{--app:var(--michi)} .app-megu{--app:var(--megu)} .app-ten{--app:var(--ten)} .app-yama{--app:var(--yama)} .app-komu{--app:var(--komu)} .app-chari{--app:var(--chari)}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font-size:16px;line-height:1.8;
   font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Meiryo",sans-serif}
 a{color:var(--app)}
+img{max-width:100%}
 .wrap{max-width:960px;margin:0 auto;padding:0 16px}
 .narrow{max-width:720px}
 
 /* 上の帯 */
 header.site{background:var(--card);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px}
-.brand{font-weight:700;color:var(--text);text-decoration:none}
+.brand{font-weight:700;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:8px}
+.brand img{width:28px;height:28px;border-radius:7px}
 .back{font-size:14px;color:var(--sub);text-decoration:none}
 .badge-trial{font-size:12px;color:var(--sub);border:1px solid var(--line);border-radius:999px;padding:2px 10px;white-space:nowrap}
 
@@ -24,31 +31,40 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 .hero{padding:36px 0 8px}
 .hero h1{font-size:26px;line-height:1.45;margin:0 0 14px}
 .lead{margin:0 0 12px}
-.catch{font-weight:700;font-size:18px;margin:4px 0 12px}
 .app-title{display:flex;align-items:center;gap:14px;margin-bottom:12px}
-.app-title h1{margin:0}
+.app-title h1{margin:0;line-height:1.3}
+.app-title .yomi{display:block;font-size:13px;font-weight:400;color:var(--sub)}
+
+/* アプリの印（本物のアイコン。ないアプリは頭文字の丸） */
+.mark{width:52px;height:52px;border-radius:13px;background:var(--app);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;flex:none;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.18)}
+.mark img{width:100%;height:100%;display:block}
+.mark.big{width:68px;height:68px;border-radius:16px;font-size:28px}
+.mark.small{width:40px;height:40px;border-radius:10px;font-size:17px}
 
 /* カード */
-.cards{display:grid;grid-template-columns:1fr;gap:16px;margin:24px 0}
+.cards{display:grid;grid-template-columns:1fr;gap:16px;margin:20px 0}
 .card{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--app);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column}
 .card-head{display:flex;align-items:center;gap:12px}
-.card p.say{margin:12px 0 16px;flex:1}
-.mark{width:48px;height:48px;border-radius:50%;background:var(--app);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;flex:none}
-.mark.big{width:60px;height:60px;font-size:26px}
 .name{font-weight:700;font-size:19px;margin:0;line-height:1.3}
 .meta{font-size:13px;color:var(--sub);margin:0}
+.cards.mini .card{padding:14px 16px}
+.cards.mini .name{font-size:17px}
 
 /* ボタン（指で押しやすい高さ） */
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;text-decoration:none;font-weight:700;font-size:15px}
 .btn.main{background:var(--app);color:#fff}
-.btn.sub{background:#fff;border:1px solid #cfcac0;color:var(--text)}
+.btn.sub{background:var(--card);border:1px solid var(--line);color:var(--text)}
 .btn:hover{filter:brightness(1.06)}
+@media (prefers-color-scheme: dark){.btn.main{color:#14201a}}
 
 /* 本文のまとまり */
 section{margin:32px 0}
 h2{font-size:20px;line-height:1.4;margin:0 0 12px;padding-left:12px;border-left:5px solid var(--app)}
+h2 .sub{font-size:13px;font-weight:400;color:var(--sub);margin-left:6px}
+h3{font-size:16px;margin:16px 0 4px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 20px}
+.box p{margin:6px 0}
 ul.plain,ol.steps{margin:0;padding-left:1.3em}
 ul.plain li,ol.steps li{margin:6px 0}
 ul.tags{list-style:none;margin:0;padding:0}
@@ -59,14 +75,7 @@ ul.tags li{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
 .tag.plan{background:#eceae4;color:#55534d}
 .note{font-size:14px;color:var(--sub)}
 .warn{background:#fdf0e9;border:2px solid var(--komu);border-radius:14px;padding:12px 18px;font-weight:700;color:#7a3416;margin:20px 0 0}
-
-/* パソコンで見ている人にだけ出す一言（マウスで操作する端末） */
-.pc-note{display:none;background:#eef3f9;border-radius:10px;padding:10px 14px;font-size:14px;color:#2f4f73;margin:16px 0}
-@media (hover:hover) and (pointer:fine){.pc-note{display:block}}
-
-/* 下の帯 */
-footer.site{border-top:1px solid var(--line);margin-top:48px;padding:20px 0 40px;font-size:13px;color:var(--sub)}
-footer.site p{margin:4px 0}
+@media (prefers-color-scheme: dark){.warn{background:#3a2a22;color:#f6c9b2}}
 
 /* 「〜たら」の場面 */
 ul.scenes{list-style:none;margin:12px 0 16px;padding:0;flex:1}
@@ -74,10 +83,35 @@ ul.scenes li{position:relative;padding-left:16px;margin:4px 0;line-height:1.65}
 ul.scenes li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--app)}
 .hero ul.scenes li{font-weight:700;font-size:17px}
 
-/* TOPの冒頭の4行 */
+/* TOPの冒頭 */
 .eyebrow{font-size:14px;color:var(--sub);letter-spacing:.15em;margin:0 0 10px}
 ul.hero-lines{list-style:none;margin:0 0 18px;padding:0}
 ul.hero-lines li{font-size:21px;font-weight:700;line-height:1.6;color:var(--app);margin:2px 0}
+
+/* 4つのつながり */
+.link-box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.link-icons{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.link-icons .plus{color:var(--sub);font-weight:700}
+ul.links{list-style:none;margin:0;padding:0}
+ul.links li{display:flex;gap:10px;margin:10px 0;line-height:1.6}
+ul.links li b.ic{flex:none;width:28px;text-align:center;font-size:20px;line-height:1.3}
+
+/* パソコンで見ている人にだけ出す一言（マウスで操作する端末） */
+.pc-note{display:none;background:#eef3f9;border-radius:10px;padding:10px 14px;font-size:14px;color:#2f4f73;margin:16px 0}
+@media (hover:hover) and (pointer:fine){.pc-note{display:block}}
+@media (prefers-color-scheme: dark){.pc-note{background:#22303f;color:#c3d6ee}}
+
+/* 表（送る情報など） */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;line-height:1.6}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+.tbl th{font-weight:700;background:var(--soft)}
+.tbl-wrap{overflow-x:auto}
+
+/* 下の帯 */
+footer.site{border-top:1px solid var(--line);margin-top:48px;padding:20px 0 40px;font-size:13px;color:var(--sub)}
+footer.site p{margin:4px 0}
+footer.site nav{display:flex;flex-wrap:wrap;gap:6px 18px;margin-bottom:10px}
+footer.site nav a{color:var(--sub);font-size:14px}
 
 /* 画面が広いとき（パソコン・タブレット） */
 @media (min-width:720px){

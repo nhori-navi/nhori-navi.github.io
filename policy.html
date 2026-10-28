@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
+<meta name="robots" content="noindex, nofollow">
+<title>プライバシーポリシー｜ミル シリーズ</title>
+<meta name="description" content="ミル シリーズのアプリが扱う情報と、外部のサービスに送る情報。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="プライバシーポリシー｜ミル シリーズ">
+<meta property="og:description" content="ミル シリーズのアプリが扱う情報と、外部のサービスに送る情報。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css?v=3">
+<script src="site.js?v=3" defer></script>
+</head>
+<body>
+<header class="site"><div class="wrap narrow">
+  <a class="back" href="./">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
+</div></header>
+
+<main class="wrap narrow">
+  <div class="hero"><h1>プライバシーポリシー</h1>
+    <p class="note">公開の前の下書きです。制定日・運営者・お問い合わせの窓口は、公開のときに決めて書き入れます。</p></div>
+
+  <section>
+    <h2>1. 基本的な考え方</h2>
+    <div class="box">
+      <p><span class="series">ミル シリーズ</span>（MichiMiru・MeguMiru・TenMiru・YamaMiru・KomuMiru・ChariMiru。以下「本アプリ」）には、会員登録やログインの仕組みがありません。運営者が、利用者の氏名・メールアドレス・位置・記録などを集めることはありません。</p>
+      <p>本アプリは、地図や道などのデータを受け取るために、下の3に書いた外部のサービスに直接問い合わせます。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. 端末の中だけで使う情報</h2>
+    <div class="box"><ul class="plain">
+      <li><b>現在地</b>：ルートの計算、歩いた・走った記録、近くの場所・飛行機・山の計算に使います。次に開いたときの地図のために、最後にいた場所の目安（約100m 単位）を端末に保存します。</li>
+      <li><b>スマホの向き（方位・傾き）</b>：地図を進む向きに回す、スマホを向けた方向の飛行機・星・山を出すために使います。</li>
+      <li><b>カメラの映像</b>（TenMiru・YamaMiru）：映像に飛行機・星・山の名前を重ねるために、端末の中だけで使います。保存も送信もしません。</li>
+      <li><b>記録</b>：歩いた・走った記録、集めた場所、図鑑、設定などを、端末のブラウザの保存領域に保存します。歩いた記録は日時つきの行動の履歴そのものなので、書き出したファイルは人に渡さないでください。</li>
+      <li>ミル シリーズのアプリは同じアドレスの下にあるので、おたがいの記録を端末の中で読み合います（たとえば MeguMiru が MichiMiru の歩いた記録を読む）。端末の外には出ません。</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <h2>3. 外部のサービスに送る情報</h2>
+    <div class="box">
+      <p>いずれも、利用者の氏名などは含みません。通信の性質上、送り先には端末の IP アドレス（インターネット上の住所にあたる番号）やブラウザの種類が伝わります。送る範囲や地点から、利用者のおおよその場所が推測できる場合があります。これらの扱いは、各サービスのプライバシーポリシーによります。</p>
+      <h3>どのアプリも</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>Mapbox 社</td><td>表示している地図の範囲</td><td>地図を表示するため</td></tr>
+      <tr><td>jsDelivr などのプログラムの配信元</td><td>なし（受け取るだけ）</td><td>天体の計算などのプログラムを読み込むため</td></tr>
+    </table></div>
+
+      <h3>MichiMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>OpenStreetMap のデータの公開サーバー（Overpass API）</td><td>出発地・目的地のまわりを約2km 四方のマスに分けた範囲</td><td>歩ける道と、神社・寺・公園のデータを受け取るため</td></tr>
+      <tr><td>国土地理院</td><td>標高タイルの番号、住所で探したときの文字</td><td>坂の計算と、住所での検索のため</td></tr>
+      <tr><td>OpenStreetMap 財団（Nominatim）</td><td>検索した文字と、出発地のまわりの範囲（中心を約500m 単位に丸める）</td><td>駅名・施設名で目的地を探すため</td></tr>
+      <tr><td>Open-Meteo</td><td>今日のおすすめで、現在地と山の場所の目安（約1km 単位）</td><td>山が見えそうかの天気予報のため</td></tr>
+      <tr><td>Mapbox 社（設定で入にしたときだけ）</td><td>出発地・経由地・目的地の座標</td><td>比べる用の徒歩ルートを出すため</td></tr>
+      <tr><td>Google 社（押したときだけ）</td><td>乗る駅・降りる駅、またはバーチャル東海道の上の位置</td><td>乗り換え・ストリートビューを開くため</td></tr>
+    </table></div>
+
+      <h3>MeguMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>Wikipedia（ウィキメディア財団）</td><td>場所の名前</td><td>場所の一言説明を受け取るため（設定で切にできます）</td></tr>
+    </table></div>
+
+      <h3>TenMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>運営者の中継（Cloudflare 社・Google 社のサービスの上で動かしています）</td><td>現在地または選んだ場所の目安（約1km 単位）、表示する範囲、上空の便名</td><td>周りの飛行機の位置と行き先を受け取るため</td></tr>
+      <tr><td>adsb.lol</td><td>近くを飛んでいる機体の便名と、その機体の位置</td><td>行き先を調べるため</td></tr>
+      <tr><td>国土地理院、OpenStreetMap 財団（Nominatim）</td><td>空を見た場所の目安（約1km 単位）</td><td>地名を表示するため</td></tr>
+      <tr><td>Planespotters.net</td><td>機体の識別番号</td><td>機体の写真を表示するため</td></tr>
+    </table></div>
+
+      <h3>YamaMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>国土地理院</td><td>計算する地点のまわり約150km の範囲のタイル番号</td><td>山並みを計算するため</td></tr>
+      <tr><td>Wikidata・Wikipedia（ウィキメディア財団）</td><td>計算する地点の目安（約1km 単位）、山名</td><td>山の名前・標高・説明を受け取るため</td></tr>
+      <tr><td>OpenStreetMap のデータの公開サーバー</td><td>「小さな山も表示」のとき、縦横1度のマスの範囲</td><td>小さな山の名前を受け取るため</td></tr>
+      <tr><td>Open-Meteo</td><td>計算する地点・お気に入りの地点・代表の山の目安（約1km 単位）</td><td>山が見えそうかの天気予報のため</td></tr>
+    </table></div>
+
+      <h3>KomuMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>Mapbox 社</td><td>現在地・経由地・目的地の座標、検索した文字</td><td>ルートと渋滞の計算、目的地の検索のため</td></tr>
+      <tr><td>OpenStreetMap のデータの公開サーバー</td><td>現在地やルートのまわりの範囲</td><td>IC・料金所・SA・PA のデータを受け取るため</td></tr>
+    </table></div>
+
+      <h3>ChariMiru</h3>
+    <div class="tbl-wrap"><table class="tbl"><tr><th>送り先</th><th>送る情報</th><th>目的</th></tr>
+      <tr><td>OpenRouteService（予備に Mapbox 社）</td><td>出発地・経由地・目的地の座標</td><td>自転車のルートを計算するため</td></tr>
+      <tr><td>国土地理院</td><td>標高タイルの番号</td><td>坂の計算のため</td></tr>
+    </table></div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Cookie・アクセス解析・広告</h2>
+    <div class="box"><p>いまは、Cookie・アクセス解析・広告を使っていません。使うときは、この項目を書き換えてお知らせします。</p></div>
+  </section>
+
+  <section>
+    <h2>5. 記録の消し方</h2>
+    <div class="box"><p>記録は、各アプリの記録を消すボタン、またはブラウザの設定で「サイトデータを削除」すると消えます（同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えます）。運営者の側に記録はないため、運営者が記録を消したり、元に戻したりすることはできません。</p></div>
+  </section>
+
+  <section>
+    <h2>6. このポリシーの変更</h2>
+    <div class="box"><p>内容を変えるときは、このページでお知らせします。</p></div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap narrow">
+  <nav><a href="./">TOP</a><a href="notes.html">ご利用にあたって</a><a href="policy.html">プライバシーポリシー</a><a href="notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
+</div></footer>
+</body>
+</html>
