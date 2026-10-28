@@ -3,36 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
 <meta name="robots" content="noindex, nofollow">
 <title>ミル シリーズ</title>
-<meta name="description" content="空・山・道・混み具合。ふだん目にしているものが、もう少しだけ分かるようになるアプリのシリーズです。">
-<meta name="theme-color" content="#faf8f4">
-<link rel="stylesheet" href="style.css?v=2">
-<script src="site.js?v=1" defer></script>
+<meta name="description" content="道・場所・空・山。ふだん目にしているものが、もう少しだけ分かるようになるアプリのシリーズです。">
+<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ミル シリーズ">
+<meta property="og:description" content="道・場所・空・山。ふだん目にしているものが、もう少しだけ分かるようになるアプリのシリーズです。">
+<meta property="og:image" content="https://nhori-navi.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon-48.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css?v=3">
+<script src="site.js?v=3" defer></script>
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="brand series" href="./">ミル シリーズ</a><span class="badge-trial">試作中</span>
+  <a class="brand" href="./"><img src="series-icon.png" alt=""><span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
 </div></header>
 
 <main class="wrap">
   <div class="hero">
     <p class="eyebrow">見て、知る。</p>
     <ul class="hero-lines">
+      <li class="app-michi">まだ歩いていない道を歩けたら。</li>
+      <li class="app-megu">行った場所が、自然に集まったら。</li>
       <li class="app-ten">あの飛行機の行き先が分かったら。</li>
       <li class="app-yama">あの山の名前が分かったら。</li>
-      <li class="app-michi">まだ歩いていない道を歩けたら。</li>
-      <li class="app-komu">渋滞を抜ける道が分かったら。</li>
     </ul>
     <p class="lead">そんな「あったらいいな」を、AIに力を借りて形にしました。</p>
     <p class="lead">ふだん目にしているものが、もう少しだけ分かるようになると、外に出るのがちょっと楽しみになります。そんな気持ちで作っています。</p>
   </div>
 
-  <p class="pc-note">パソコンで見ています。どのアプリもスマホで使うことを考えて作っています。空や山にスマホを向ける機能や、歩いた記録は、スマホで開くと使えます。</p>
+  <p class="pc-note">パソコンで見ています。どのアプリもスマホで使うことを考えて作っています。歩いた記録や、空や山にスマホを向ける機能は、スマホで開くと使えます。</p>
 
-  <div class="cards">
+  <section>
+    <h2>歩いて楽しむ4つ</h2>
+    <div class="cards">
+    <article class="card app-michi">
+      <div class="card-head"><div class="mark"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="name">MichiMiru</p><p class="meta">歩く・道を選んで記録する</p></div></div>
+      <ul class="scenes">
+        <li>いつもの散歩に、まだ歩いていない道を混ぜられたら</li>
+        <li>歩くたびに、自分だけの地図が塗られていったら</li>
+        <li>「今日はどこを歩こう」を、まかせられたら</li>
+      </ul>
+      <div class="btns"><a class="btn main" href="walk/">アプリを開く</a><a class="btn sub" href="guide/michi.html">くわしく</a></div>
+    </article>
+    <article class="card app-megu">
+      <div class="card-head"><div class="mark"><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div><p class="name">MeguMiru</p><p class="meta">めぐる・行った場所を集める</p></div></div>
+      <ul class="scenes">
+        <li>通った駅や町が、何もしなくても記録されていたら</li>
+        <li>近くに「まだ行っていない史跡」があると知れたら</li>
+        <li>行きたい場所のまわりの「まだ」が、ひと目で分かったら</li>
+      </ul>
+      <div class="btns"><a class="btn main" href="megu/">アプリを開く</a><a class="btn sub" href="guide/megu.html">くわしく</a></div>
+    </article>
     <article class="card app-ten">
-      <div class="card-head"><div class="mark">テ</div><div><p class="name">TenMiru</p><p class="meta">空を見上げる・スマホ向け</p></div></div>
+      <div class="card-head"><div class="mark"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div><p class="name">TenMiru</p><p class="meta">見上げる・飛行機と星</p></div></div>
       <ul class="scenes">
         <li>頭の上を通った飛行機が、どこへ行くのか分かったら</li>
         <li>「あと1分で真上」と知って、空を見上げられたら</li>
@@ -41,50 +70,77 @@
       <div class="btns"><a class="btn main" href="sora/">アプリを開く</a><a class="btn sub" href="guide/ten.html">くわしく</a></div>
     </article>
     <article class="card app-yama">
-      <div class="card-head"><div class="mark">ヤ</div><div><p class="name">YamaMiru</p><p class="meta">山を眺める・スマホ向け</p></div></div>
+      <div class="card-head"><div class="mark"><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><div><p class="name">YamaMiru</p><p class="meta">眺める・見えている山の名前</p></div></div>
       <ul class="scenes">
         <li>見えている山の名前が、すぐに分かったら</li>
-        <li>山小屋の夜に、星座が読めたら</li>
+        <li>今日は富士山が見えそうか、朝のうちに分かったら</li>
         <li>登る前に、山頂からの景色を予習できたら</li>
       </ul>
       <div class="btns"><a class="btn main" href="yama/">アプリを開く</a><a class="btn sub" href="guide/yama.html">くわしく</a></div>
     </article>
-    <article class="card app-michi">
-      <div class="card-head"><div class="mark">ミ</div><div><p class="name">MichiMiru</p><p class="meta">道を歩く・スマホ向け</p></div></div>
-      <ul class="scenes">
-        <li>いつもの散歩に、まだ歩いていない道を混ぜられたら</li>
-        <li>歩くたびに、自分だけの地図が塗られていったら</li>
-        <li>家に戻ってくるお散歩コースを、つくってくれたら</li>
+    </div>
+  </section>
+
+  <section>
+    <h2>4つはつながっています</h2>
+    <div class="link-box">
+      <div class="link-icons"><div class="mark small"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span class="plus">＋</span><div class="mark small"><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div class="mark small"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div class="mark small"><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div></div>
+      <p>別々のアプリですが、同じ場所に記録を置いているので、おたがいの記録を使い合います。</p>
+      <ul class="links">
+        <li><b class="ic">🚶</b><span>MichiMiru で歩くと、通った駅や史跡が MeguMiru に自然に入ります（取り込みの操作はいりません）。</span></li>
+        <li><b class="ic">☀</b><span>MichiMiru の「今日のおすすめ」に、富士山の見え方（YamaMiru）、今夜の宇宙ステーション（TenMiru）、近くのまだ行っていない場所（MeguMiru）がまとめて出ます。そのまま散歩のコースにできます。</span></li>
+        <li><b class="ic">🏁</b><span>散歩を終えると、その間に集めた場所・見上げた飛行機・見つけた山まで1枚のまとめになり、散歩日記に残ります。</span></li>
+        <li><b class="ic">💾</b><span>4つの記録を、1つのファイルにまとめて控えられます。</span></li>
       </ul>
-      <div class="btns"><a class="btn main" href="walk/">アプリを開く</a><a class="btn sub" href="guide/michi.html">くわしく</a></div>
-    </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>乗り物のミル<span class="sub">試作</span></h2>
+    <div class="cards mini">
     <article class="card app-komu">
-      <div class="card-head"><div class="mark">コ</div><div><p class="name">KomuMiru</p><p class="meta">車で走る・スマホ向け</p></div></div>
+      <div class="card-head"><div class="mark small"><img src="navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><div><p class="name">KomuMiru</p><p class="meta">車で走る・渋滞を比べる</p></div></div>
       <ul class="scenes">
         <li>渋滞の中で「降りたほうが早い？」がすぐ分かったら</li>
         <li>乗るICを、その日の混み具合で選べたら</li>
-        <li>少し遠回りでも、結局早く着く道を選べたら</li>
       </ul>
       <div class="btns"><a class="btn main" href="navi/">アプリを開く</a><a class="btn sub" href="guide/komu.html">くわしく</a></div>
     </article>
-  </div>
+    <article class="card app-chari">
+      <div class="card-head"><div class="mark small">チ</div><div><p class="name">ChariMiru</p><p class="meta">自転車で走る・坂と記録</p></div></div>
+      <ul class="scenes">
+        <li>坂の上り下りを見てから、ルートを決められたら</li>
+        <li>走った距離が、東海道や地球一周につながったら</li>
+      </ul>
+      <div class="btns"><a class="btn main" href="chari/">アプリを開く</a><a class="btn sub" href="guide/chari.html">くわしく</a></div>
+    </article>
+    </div>
+  </section>
 
   <section>
     <h2>はじめる前に</h2>
     <div class="box"><ul class="plain">
       <li>まだ試作中です。画面や機能が変わったり、うまく動かなかったりすることがあります。</li>
-      <li>登録やログインはありません。</li>
-      <li>図鑑や歩いた道などの記録は、使っているスマホやパソコンのブラウザの中に保存されます。ほかの端末とは共有されません。</li>
-      <li>ブラウザの設定で「サイトデータ」を消すと、記録も消えます。大切な記録は、各アプリの「書き出し」で控えを取っておくと安心です。</li>
-      <li>位置情報は、アプリの中で計算に使います。くわしくは各アプリの紹介ページに書いています。</li>
+      <li>どれもブラウザで開くアプリ（ウェブアプリ）です。登録やログインはありません。Android の Chrome で確かめています。</li>
+      <li>よく使うアプリは、ブラウザのメニューの「ホーム画面に追加」で、アプリのように開けます。</li>
+      <li>記録は、使っているスマホやパソコンのブラウザの中に保存されます。ほかの端末とは共有されず、運営者の手元にも届きません。大切な記録は、各アプリの「書き出し」で控えを取っておくと安心です。</li>
+      <li>歩きながら、運転しながら画面を見ないでください。</li>
     </ul></div>
+  </section>
+
+  <section>
+    <h2>アプリ版について</h2>
+    <div class="box">
+      <p>ウェブアプリには、スマホの画面を消すと位置の記録が止まるという限りがあります。画面を消してポケットに入れたままでも記録が続く Android のアプリ版を、いま試しています。</p>
+      <p class="note">アプリ版の配布は準備中です。いまはウェブアプリでお使いください。</p>
+    </div>
   </section>
 </main>
 
 <footer class="site"><div class="wrap">
-  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリです。</p>
-  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページにまとめています。</p>
-  <p>プライバシーポリシーは準備中です。</p>
+  <nav><a href="./">TOP</a><a href="notes.html">ご利用にあたって</a><a href="policy.html">プライバシーポリシー</a><a href="notes.html#contact">お問い合わせ</a></nav>
+  <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
+  <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
 </div></footer>
 </body>
 </html>
