@@ -1,6 +1,7 @@
-// ミル シリーズ TOP の動き（版4：2026-10-29）
+// ミル シリーズ TOP・紹介ページの動き（版5：2026-10-29。紹介ページでも読む）
 // はじめの絵：昼→夕暮れ→夜→明け方を30秒でめぐる。右下の丸ボタンで昼夜を切り替え
 (function(){
+if(!document.getElementById('scene'))return; // はじめの絵があるのは TOP だけ
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
 const el=(t,a,p)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||null)&&p.appendChild(e);return e};
 let seed=7;const rnd=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
