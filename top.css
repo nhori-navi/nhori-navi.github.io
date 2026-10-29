@@ -1,0 +1,131 @@
+/* ミル シリーズ TOP だけの見た目（v4：2026-10-29）。共通の見た目は style.css */
+
+/* ── はじめの絵 ── */
+.top-hero{margin:0;position:relative;height:min(92vh,760px);min-height:560px;overflow:hidden;background:#79b0e2;--ink:#1f2a33;--ink2:#1f2a33cc}
+.top-hero svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.th-copy{position:absolute;left:0;right:0;top:0;padding:24px 20px 0;color:var(--ink);pointer-events:none}
+.th-tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;border:1px solid currentColor;border-radius:999px;padding:3px 12px 3px 4px;margin-bottom:14px;opacity:.85}
+.th-tag img{width:20px;height:20px;border-radius:5px}
+.th-title{font-size:clamp(28px,7.4vw,50px);line-height:1.35;margin:0 0 12px;font-weight:700;letter-spacing:.02em}
+.th-lead{font-size:clamp(14px,3.8vw,17px);line-height:1.8;margin:0;color:var(--ink2);max-width:30em}
+.th-cta{position:absolute;left:16px;bottom:16px;display:inline-flex;align-items:center;gap:6px;min-height:48px;padding:0 20px;border-radius:999px;background:#fff;color:#1f2a33;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.th-cta span{display:inline-block;transition:transform .2s}
+.th-cta:hover span{transform:translateY(2px)}
+.th-toggle{position:absolute;right:16px;bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.22);color:#fff;font-size:20px;cursor:pointer;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.top-hero .hot{cursor:pointer}
+.twinkle{animation:tw 3.2s ease-in-out infinite}
+@keyframes tw{50%{opacity:.25}}
+@media (min-width:760px){
+  .th-copy{padding:44px 0 0 max(24px,6vw)}
+  .th-copy>*{max-width:440px}
+  .th-copy .th-lead{max-width:550px;font-size:16px}
+  .th-cta{left:max(24px,6vw);bottom:28px}
+}
+
+/* ── 見出しまわり ── */
+.top-main{padding-top:8px}
+.sec{margin:56px 0}
+.kicker{font-size:13px;letter-spacing:.14em;color:var(--sub);margin:0 0 6px}
+.sec-title{font-size:clamp(22px,5.6vw,30px);line-height:1.45;margin:0 0 14px;font-weight:700;border:0;padding:0}
+.sec-lead{margin:0 0 20px;color:var(--sub)}
+
+/* ── たとえば、こんな土曜日 ── */
+.day{list-style:none;margin:0;padding:0;position:relative}
+.day::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.day li{position:relative;display:grid;grid-template-columns:40px 1fr;gap:14px;padding:10px 0}
+.day .mark.small{width:40px;height:40px;border-radius:11px;font-size:16px;position:relative;z-index:1}
+.day .when{font-size:13px;color:var(--sub);margin:0;line-height:1.5}
+.day .when b{color:var(--app);font-weight:700;margin-left:6px}
+.day .what{margin:2px 0 0;font-size:17px;line-height:1.65}
+.day-foot{margin:18px 0 0;padding:14px 18px;background:var(--soft);border-radius:12px;font-size:15px}
+
+/* ── 4つのアプリ ── */
+.feature{display:grid;gap:18px;margin:0 0 44px}
+.scene{border-radius:18px;overflow:hidden;background:var(--card);border:1px solid var(--line);aspect-ratio:5/3}
+.scene svg{display:block;width:100%;height:100%}
+.f-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.f-head .verb{font-size:13px;color:var(--app);font-weight:700;margin:0;letter-spacing:.08em}
+.f-head .name{font-size:20px}
+.voice{font-size:clamp(21px,5.2vw,26px);line-height:1.5;font-weight:700;margin:0 0 10px;color:var(--text)}
+.voice::before{content:"「";color:var(--app)}
+.voice::after{content:"」";color:var(--app)}
+.f-text{margin:0 0 14px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0}
+.chips li{font-size:13px;line-height:1.5;padding:6px 12px;border-radius:999px;border:1px solid var(--app);color:var(--app);background:var(--card)}
+@media (min-width:820px){
+  .feature{grid-template-columns:1.1fr 1fr;align-items:center;gap:36px}
+  .feature.flip .scene{order:2}
+}
+
+/* ── 続けたくなる仕掛け ── */
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.tile .lab{font-size:13px;color:var(--sub);margin:0 0 6px}
+.tile .num{font-size:34px;font-weight:700;line-height:1.1;margin:0;color:var(--michi)}
+.tile .num small{font-size:15px;margin-left:3px;color:var(--sub);font-weight:400}
+.tile.wide{grid-column:1/-1}
+.week{display:flex;gap:6px;margin-top:10px}
+.week i{flex:1;height:8px;border-radius:4px;background:var(--line)}
+.week i.on{background:var(--michi)}
+.bar{height:10px;border-radius:5px;background:var(--line);overflow:hidden;margin-top:12px}
+.bar b{display:block;height:100%;width:0;background:var(--michi);border-radius:5px;transition:width 1.4s ease-out}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.badges span{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--soft);border:1px dashed var(--line)}
+.badges span.on{border:0;background:var(--app)}
+.badges svg{width:20px;height:20px}
+.tokaido{position:relative;margin:22px 8px 34px;height:4px;background:var(--line);border-radius:2px}
+.tokaido b{position:absolute;left:0;top:0;height:100%;width:0;background:var(--michi);border-radius:2px;transition:width 1.6s ease-out}
+.tokaido .dot{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--card);border:4px solid var(--michi);left:0;transition:left 1.6s ease-out}
+.tokaido .ends{position:absolute;left:-8px;right:-8px;top:16px;display:flex;justify-content:space-between;font-size:12px;color:var(--sub)}
+.tokaido-now{font-size:16px;margin:4px 0 0}
+.tiny{font-size:12px;color:var(--sub);margin:10px 0 0}
+@media (min-width:820px){.tiles{grid-template-columns:repeat(4,1fr)}.tile.wide{grid-column:span 2}.tile.tok{grid-column:1/-1}}
+
+/* ── 乗り物のミル ── */
+.ride{display:grid;gap:12px}
+.ride .card{border-top-width:4px}
+.ride .say{font-weight:700;margin:10px 0 14px}
+@media (min-width:720px){.ride{grid-template-columns:1fr 1fr}}
+
+/* ── はじめかた ── */
+.steps3{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:10px;counter-reset:s}
+.steps3 li{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;counter-increment:s}
+.steps3 li::before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--text);color:var(--bg);display:flex;align-items:center;justify-content:center;font-weight:700}
+.steps3 b{display:block}
+.steps3 small{color:var(--sub);font-size:13px}
+.safe{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px}
+.safe div{text-align:center;padding:14px 6px;border-radius:14px;background:var(--soft);font-size:13px;line-height:1.5}
+.safe b{display:block;font-size:15px;margin-bottom:2px}
+@media (min-width:720px){.steps3{grid-template-columns:repeat(3,1fr)}.steps3 li{flex-direction:column;align-items:flex-start}}
+.safety{margin:40px 0 0;padding:14px 18px;border-radius:12px;border:1px solid var(--line);font-size:14px;color:var(--sub)}
+
+/* ── 小さな絵の色（明るい画面／暗い画面） ── */
+.scene{--s-bg:#eef5ee;--s-street:#ffffff;--s-ink:#2b3a33;--s-faint:#c9d6cc;--s-card:#ffffff}
+@media (prefers-color-scheme: dark){
+  .scene{--s-bg:#1f2824;--s-street:#34403a;--s-ink:#e6ece8;--s-faint:#46524b;--s-card:#2b3430}
+}
+.scene text{font-family:inherit}
+
+/* ── 画面に入ったら、ふわっと出す ── */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.paint{opacity:0;transition:opacity .45s ease}
+.in .paint{opacity:1}
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .paint{opacity:1;transition:none}
+  .twinkle{animation:none}
+  .bar b,.tokaido b,.tokaido .dot{transition:none}
+}
+
+/* 小さな絵ごとの色 */
+.scene.megu{--s-bg:#f3eff6}
+.ten-s0{stop-color:#5d9ad6}.ten-s1{stop-color:#bfdcf3}
+.yama-s0{stop-color:#bcd8ee}.yama-s1{stop-color:#f2efe6}
+.yama-r0{fill:#b9cad9}.yama-r1{fill:#8fb0a2}.yama-r2{fill:#6e9a78}.yama-r3{fill:#557f5c}
+@media (prefers-color-scheme: dark){
+  .scene.megu{--s-bg:#26222b}
+  .ten-s0{stop-color:#203f69}.ten-s1{stop-color:#4c74a3}
+  .yama-s0{stop-color:#2a4058}.yama-s1{stop-color:#5f6f7e}
+  .yama-r0{fill:#55667a}.yama-r1{fill:#3e5a52}.yama-r2{fill:#2f4a3a}.yama-r3{fill:#233a2c}
+}
