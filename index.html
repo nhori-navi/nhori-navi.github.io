@@ -6,134 +6,212 @@
 <!-- 公開するまでは検索に出さない（公開するときにこの1行を消す） -->
 <meta name="robots" content="noindex, nofollow">
 <title>ミル シリーズ</title>
-<meta name="description" content="道・場所・空・山。ふだん目にしているものが、もう少しだけ分かるようになるアプリのシリーズです。">
-<meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1c1f1e" media="(prefers-color-scheme: dark)">
+<meta name="description" content="いつもの散歩に、少しの冒険を。歩いた道が塗られ、通った駅が集まり、頭の上の飛行機と遠くの山に名前がつく、4つの小さなアプリです。">
+<meta name="theme-color" content="#79b0e2">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ミル シリーズ">
-<meta property="og:description" content="道・場所・空・山。ふだん目にしているものが、もう少しだけ分かるようになるアプリのシリーズです。">
+<meta property="og:description" content="いつもの散歩に、少しの冒険を。歩いた道が塗られ、通った駅が集まり、頭の上の飛行機と遠くの山に名前がつく、4つの小さなアプリです。">
 <meta property="og:image" content="https://nhori-navi.github.io/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon-48.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="top.css?v=4">
+<script>document.documentElement.classList.add('js')</script>
 <script src="site.js?v=3" defer></script>
+<script src="top.js?v=4" defer></script>
 </head>
 <body>
-<header class="site"><div class="wrap">
-  <a class="brand" href="./"><img src="series-icon.png" alt=""><span class="series">ミル シリーズ</span></a><span class="badge-trial">試作中</span>
-</div></header>
-
-<main class="wrap">
-  <div class="hero">
-    <p class="eyebrow">見て、知る。</p>
-    <ul class="hero-lines">
-      <li class="app-michi">まだ歩いていない道を歩けたら。</li>
-      <li class="app-megu">行った場所が、自然に集まったら。</li>
-      <li class="app-ten">あの飛行機の行き先が分かったら。</li>
-      <li class="app-yama">あの山の名前が分かったら。</li>
-    </ul>
-    <p class="lead">そんな「あったらいいな」を、AIに力を借りて形にしました。</p>
-    <p class="lead">ふだん目にしているものが、もう少しだけ分かるようになると、外に出るのがちょっと楽しみになります。そんな気持ちで作っています。</p>
+<section class="top-hero" id="hero" aria-label="はじめに">
+<svg id="scene" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMax slice" role="img" aria-label="昼から夜へ移り変わる、山並みと町の景色">
+<defs>
+  <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+    <stop id="s0" offset="0" stop-color="#7fb6e6"/><stop id="s1" offset=".55" stop-color="#a9d2f0"/><stop id="s2" offset="1" stop-color="#e9f2f3"/>
+  </linearGradient>
+  <radialGradient id="gSun"><stop offset="0" stop-color="#fff6d8"/><stop offset=".18" stop-color="#ffe3a0"/><stop offset=".45" stop-color="#ffd27a" stop-opacity=".35"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="gMoon"><stop offset="0" stop-color="#fff9e6" stop-opacity=".55"/><stop offset="1" stop-color="#fff9e6" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gTrail" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gHaze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient>
+  <mask id="mMoon"><rect x="-40" y="-40" width="80" height="80" fill="#fff"/><circle cx="9" cy="-6" r="19" fill="#000"/></mask>
+</defs>
+<rect width="1200" height="760" fill="url(#gSky)"/>
+<g id="stars" opacity="0"></g>
+<g id="constel" opacity="0" stroke="#cfd8ff" stroke-width="1" fill="none" stroke-opacity=".35"></g>
+<g id="sun"><circle r="150" fill="url(#gSun)"/><circle r="26" fill="#fff4d2"/></g>
+<g id="glint" opacity="0"><path d="M0 -70 L5 -5 L70 0 L5 5 L0 70 L-5 5 L-70 0 L-5 -5 Z" fill="#fff8e0"/><circle r="34" fill="#fff6d8" opacity=".55"/></g>
+<g id="moon" opacity="0"><circle r="120" fill="url(#gMoon)"/><circle r="22" fill="#fbf3dc" mask="url(#mMoon)"/></g>
+<g id="clouds"></g>
+<g id="iss" opacity="0"><circle r="3.2" fill="#fff"/><circle r="9" fill="#fff" opacity=".18"/>
+  <line x1="0" y1="-8" x2="0" y2="-30" stroke="#fff" stroke-opacity=".6"/><text x="0" y="-38" text-anchor="middle" font-size="16" fill="#fff" opacity=".9">宇宙ステーション</text></g>
+<g id="plane" class="hot" data-go="ten"><rect x="-50" y="-60" width="100" height="90" fill="transparent"/>
+  <rect id="trail" x="-260" y="-1.5" width="240" height="3" rx="1.5" fill="url(#gTrail)"/>
+  <g id="pbody" fill="#2b4a6b">
+    <path d="M-30 -4 L22 -4 C34 -3 38 0 34 2 C30 4 26 4 22 4 L-30 4 C-33 4 -34 0 -30 -4 Z"/>
+    <path d="M-27 -4 L-36 -19 L-29 -19 L-17 -4 Z"/>
+    <path d="M-2 1 L-16 15 L-9 15 L10 1 Z" opacity=".85"/>
+    <path d="M-26 2 L-34 8 L-29 8 L-20 2 Z" opacity=".85"/>
+  </g>
+  <circle id="blink" cx="-33" cy="-18" r="2.4" fill="#ff5a4e" opacity="0"/>
+  <g id="plabel"><line x1="0" y1="-12" x2="0" y2="-36" stroke="currentColor" stroke-opacity=".5"/><text x="0" y="-44" text-anchor="middle" font-size="16" fill="currentColor">福岡行き</text></g>
+</g>
+<path id="r0"/><path id="fujiSnow" fill="#ffffff" opacity=".9"/>
+<rect id="haze0" x="0" y="380" width="1200" height="200" fill="url(#gHaze)"/>
+<path id="r1"/><path id="r2"/>
+<g id="mlabels" font-size="16" class="hot" data-go="yama"></g>
+<path id="r3"/>
+<g id="town"></g>
+<path id="fg"/>
+<path id="route" class="hot" data-go="michi" fill="none" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 14" opacity=".75"/>
+<path id="walked" class="hot" data-go="michi" fill="none" stroke-width="7" stroke-linecap="round"/>
+<g id="walker"><circle r="9" fill="#fff"/><circle r="5.5" fill="#1e8a4c"/></g>
+<g id="pin" class="hot" data-go="megu"><path d="M0 0 C-14 0 -21 10 -21 19 C-21 33 0 50 0 50 C0 50 21 33 21 19 C21 10 14 0 0 0 Z" fill="#7a5c8e"/><circle cx="0" cy="19" r="7" fill="#fff"/></g>
+</svg>
+  <div class="th-copy">
+    <span class="th-tag"><img src="series-icon.png" alt=""><span><span class="series">ミル シリーズ</span>・楽しく育成中</span></span>
+    <h1 class="th-title">いつもの散歩に、<br>少しの冒険を。</h1>
+    <p class="th-lead">見慣れた景色が、ちょっと違って見えてくる。歩いた道が塗られ、通った駅が集まり、頭の上の飛行機と遠くの山に名前がつく。</p>
   </div>
+  <a class="th-cta" href="#apps">4つのアプリを見る <span aria-hidden="true">↓</span></a>
+  <button class="th-toggle" id="tg" type="button" aria-label="昼と夜を切り替える">☾</button>
+</section>
 
-  <p class="pc-note">パソコンで見ています。どのアプリもスマホで使うことを考えて作っています。歩いた記録や、空や山にスマホを向ける機能は、スマホで開くと使えます。</p>
+<main class="wrap top-main">
+  <section class="sec narrow reveal" style="margin-left:auto;margin-right:auto">
+    <p class="kicker">ある一日</p>
+    <h2 class="sec-title">たとえば、こんな土曜日</h2>
+    <ol class="day">
+      <li class="app-yama"><div class="mark small"><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><div><p class="when">7:30<b>YamaMiru</b></p><p class="what">「今日は富士山、見えそう」。窓を開ける前に分かる。</p></div></li>
+      <li class="app-michi"><div class="mark small"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="when">10:00<b>MichiMiru</b></p><p class="what">「おまかせ」で歩きだす。家の裏に、知らない坂道があった。</p></div></li>
+      <li class="app-megu"><div class="mark small"><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div><p class="when">10:40<b>MeguMiru</b></p><p class="what">「こんなところに古墳？」。寄り道して、ひとつ集まる。</p></div></li>
+      <li class="app-ten"><div class="mark small"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div><p class="when">11:15<b>TenMiru</b></p><p class="what">「あと1分で真上」。見上げると、福岡へ向かうジェット。</p></div></li>
+      <li class="app-ten"><div class="mark small"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div><p class="when">18:52<b>TenMiru</b></p><p class="what">宇宙ステーションが、西の空から東へすうっと。</p></div></li>
+      <li class="app-michi"><div class="mark small"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="when">夜<b>MichiMiru</b></p><p class="what">今日のまとめ。はじめての道 2.4km、駅がひとつ増えた。</p></div></li>
+    </ol>
+    <p class="day-foot">4つのアプリは記録を分け合っています。MichiMiru で歩くだけで、MeguMiru にも残ります。</p>
+  </section>
 
-  <section>
-    <h2>歩いて楽しむ4つ</h2>
-    <div class="cards">
-    <article class="card app-michi">
-      <div class="card-head"><div class="mark"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="name">MichiMiru</p><p class="meta">歩く・道を選んで記録する</p></div></div>
-      <ul class="scenes">
-        <li>いつもの散歩に、まだ歩いていない道を混ぜられたら</li>
-        <li>歩くたびに、自分だけの地図が塗られていったら</li>
-        <li>「今日はどこを歩こう」を、まかせられたら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="walk/">アプリを開く</a><a class="btn sub" href="guide/michi.html">くわしく</a></div>
+  <section class="sec" id="apps">
+    <p class="kicker reveal">4つのアプリ</p>
+    <h2 class="sec-title reveal">歩いて、めぐって、見上げて、眺める。</h2>
+    <article class="feature reveal app-michi" id="michi">
+      <div class="scene michi"><svg viewBox="0 0 500 300" role="img" aria-label="歩いた道のまわりのマスが塗られていく地図">
+<rect width="500" height="300" fill="var(--s-bg)"/><path d="M-10 200 L510 200" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 100 L510 100" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 50 L510 50" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M75 -10 L75 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M175 -10 L175 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M325 -10 L325 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M425 -10 L425 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M275 -10 L275 130 Q275 160 245 175 L175 210" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 262 Q120 250 230 280 T510 262" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><rect class="paint" style="transition-delay:0.15s" x="152" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.22s" x="202" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.29s" x="252" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.36s" x="302" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.43s" x="152" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.50s" x="202" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.57s" x="252" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.64s" x="302" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.71s" x="402" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.78s" x="52" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.85s" x="102" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.92s" x="152" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.99s" x="302" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.06s" x="352" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.13s" x="402" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.20s" x="52" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.27s" x="102" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.34s" x="152" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.41s" x="302" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.48s" x="352" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.55s" x="402" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.62s" x="52" y="252" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/>
+<path d="M425 150 L425 50 L275 50 L275 100" fill="none" stroke="#5ccf8a" stroke-width="5" stroke-dasharray="2 11" stroke-linecap="round"/>
+<path d="M75 300 L75 200 L175 200 L175 100 L325 100 L325 200 L425 200 L425 150" fill="none" stroke="#1e8a4c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="425" cy="150" r="11" fill="#fff"/><circle cx="425" cy="150" r="7" fill="#1e8a4c"/>
+<g class="paint" style="transition-delay:1.4s"><rect x="18" y="16" width="168" height="34" rx="17" fill="var(--s-card)" stroke="#1e8a4c" stroke-opacity=".35"/><text x="102" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1e8a4c">はじめての道 +1.2km</text></g>
+<g class="paint" style="transition-delay:1.7s"><rect x="18" y="58" width="128" height="30" rx="15" fill="var(--s-card)" stroke="#1e8a4c" stroke-opacity=".35"/><text x="82" y="78" text-anchor="middle" font-size="13" fill="var(--s-ink)">新しいマス +22</text></g>
+</svg></div>
+      <div>
+        <div class="f-head"><div class="mark "><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="verb">歩く</p><p class="name">MichiMiru</p></div></div>
+        <p class="voice">え、家の裏にこんな道があったの？</p>
+        <p class="f-text">まだ歩いていない道を混ぜてルートを作る、徒歩ナビです。歩いた道は約125m四方のマスで塗られ、自分だけの地図が育っていきます。</p>
+        <ul class="chips"><li>マスの完全制覇</li><li>日本橋から京都へ、バーチャル東海道</li><li>神社・寺・公園のスタンプ帳</li></ul>
+        <div class="btns"><a class="btn main" href="walk/">開いてみる</a><a class="btn sub" href="guide/michi.html">くわしく</a></div>
+      </div>
     </article>
-    <article class="card app-megu">
-      <div class="card-head"><div class="mark"><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div><p class="name">MeguMiru</p><p class="meta">めぐる・行った場所を集める</p></div></div>
-      <ul class="scenes">
-        <li>通った駅や町が、何もしなくても記録されていたら</li>
-        <li>近くに「まだ行っていない史跡」があると知れたら</li>
-        <li>行きたい場所のまわりの「まだ」が、ひと目で分かったら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="megu/">アプリを開く</a><a class="btn sub" href="guide/megu.html">くわしく</a></div>
+    <article class="feature reveal app-megu flip" id="megu">
+      <div class="scene megu"><svg viewBox="0 0 500 300" role="img" aria-label="歩いた道ぞいの駅や史跡が集まり、まわりにまだ行っていない場所がうっすら見える地図">
+<rect width="500" height="300" fill="var(--s-bg)"/><circle cx="140" cy="187" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="72" cy="211" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="265" cy="149" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="66" cy="127" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="30" cy="212" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="301" cy="184" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="429" cy="125" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="133" cy="243" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="294" cy="202" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="161" cy="154" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="443" cy="137" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="154" cy="164" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="33" cy="274" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="433" cy="176" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="429" cy="179" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="119" cy="152" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/>
+<path d="M-10 250 C80 240 110 180 190 190 S300 260 360 200 S440 130 510 150" fill="none" stroke="#7a5c8e" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/><g class="paint" style="transition-delay:0.30s"><circle cx="60" cy="238" r="17" fill="#7a5c8e"/><circle cx="60" cy="238" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="60" y="243" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">駅</text></g><g class="paint" style="transition-delay:0.55s"><circle cx="190" cy="190" r="17" fill="#7a5c8e"/><circle cx="190" cy="190" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="190" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">町</text></g><g class="paint" style="transition-delay:0.80s"><circle cx="285" cy="232" r="17" fill="#7a5c8e"/><circle cx="285" cy="232" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="285" y="237" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">史</text></g><g class="paint" style="transition-delay:1.05s"><circle cx="360" cy="200" r="17" fill="#7a5c8e"/><circle cx="360" cy="200" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="360" y="205" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">館</text></g><g class="paint" style="transition-delay:1.30s"><circle cx="452" cy="146" r="17" fill="#7a5c8e"/><circle cx="452" cy="146" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="452" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">駅</text></g>
+<g class="paint" style="transition-delay:1.7s"><rect x="18" y="16" width="304" height="62" rx="14" fill="var(--s-card)" stroke="#7a5c8e" stroke-opacity=".35"/>
+<text x="34" y="40" font-size="13" fill="var(--s-ink)" opacity=".7">今日あつめた場所</text>
+<text x="34" y="64" font-size="16" font-weight="700" fill="#7a5c8e">駅 2・町 1・史跡 1・ミュージアム 1</text></g>
+</svg></div>
+      <div>
+        <div class="f-head"><div class="mark "><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div><p class="verb">めぐる</p><p class="name">MeguMiru</p></div></div>
+        <p class="voice">歩いただけなのに、駅が3つ増えてる。</p>
+        <p class="f-text">通った駅・町・道の駅・ミュージアム・史跡・乗った路線が、なにもしなくても集まります。まだ行っていない場所は、地図にうっすら。「近くにこんなのがあったんだ」が見つかります。</p>
+        <ul class="chips"><li>6つの棚を同時に集める</li><li>行き先のまわりの「まだ」</li><li>場所のひとこと説明</li></ul>
+        <div class="btns"><a class="btn main" href="megu/">開いてみる</a><a class="btn sub" href="guide/megu.html">くわしく</a></div>
+      </div>
     </article>
-    <article class="card app-ten">
-      <div class="card-head"><div class="mark"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div><p class="name">TenMiru</p><p class="meta">見上げる・飛行機と星</p></div></div>
-      <ul class="scenes">
-        <li>頭の上を通った飛行機が、どこへ行くのか分かったら</li>
-        <li>「あと1分で真上」と知って、空を見上げられたら</li>
-        <li>夜空の月や星座の名前を、その場で言えたら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="sora/">アプリを開く</a><a class="btn sub" href="guide/ten.html">くわしく</a></div>
+    <article class="feature reveal app-ten" id="ten">
+      <div class="scene ten"><svg viewBox="0 0 500 300" role="img" aria-label="真上の印に向かって飛んでくる飛行機と、行き先と機種、真上までの残り時間">
+<defs><linearGradient id="tenSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="ten-s0"/><stop offset="1" class="ten-s1"/></linearGradient></defs>
+<rect width="500" height="300" fill="url(#tenSky)"/>
+<g opacity=".55" stroke="#fff" fill="none"><circle cx="300" cy="150" r="70" stroke-dasharray="3 7"/><circle cx="300" cy="150" r="22"/><path d="M300 70 L300 230 M220 150 L380 150" stroke-opacity=".5"/></g>
+<text x="300" y="248" text-anchor="middle" font-size="12" fill="#fff" opacity=".85">真上</text>
+<g id="tenPlane">
+ <rect x="-200" y="-1.5" width="190" height="3" rx="1.5" fill="#fff" opacity=".7"/>
+ <g fill="#1f3f63"><path d="M-30 -5 L24 -5 C37 -4 42 0 37 3 C32 5 28 5 24 5 L-30 5 C-34 5 -35 0 -30 -5 Z"/><path d="M-27 -5 L-37 -22 L-29 -22 L-16 -5 Z"/><path d="M-2 1 L-18 18 L-10 18 L11 1 Z" opacity=".85"/></g>
+</g>
+<g id="tenCard"><rect x="18" y="16" width="214" height="62" rx="14" fill="#ffffff"/>
+<text x="34" y="42" font-size="16" font-weight="700" fill="#1f3f63">福岡行き</text>
+<text x="34" y="64" font-size="12" fill="#1f3f63" opacity=".75">ボーイング787・高さ 9,800m</text></g>
+<g><rect x="330" y="244" width="152" height="40" rx="20" fill="#ffffff"/><text id="tenCount" x="406" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#2f68b8">真上まで あと 0:40</text></g>
+</svg></div>
+      <div>
+        <div class="f-head"><div class="mark "><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div><p class="verb">見上げる</p><p class="name">TenMiru</p></div></div>
+        <p class="voice">あの飛行機、福岡に行くんだ。</p>
+        <p class="f-text">頭の上を通る飛行機の行き先と機種が、その場で分かります。スマホを空に向ければ、月や星座の名前も重なります。</p>
+        <ul class="chips"><li>「あと1分で真上」のお知らせ</li><li>捕まえてレア度と点数</li><li>宇宙ステーションの通過予報</li></ul>
+        <div class="btns"><a class="btn main" href="sora/">開いてみる</a><a class="btn sub" href="guide/ten.html">くわしく</a></div>
+      </div>
     </article>
-    <article class="card app-yama">
-      <div class="card-head"><div class="mark"><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><div><p class="name">YamaMiru</p><p class="meta">眺める・見えている山の名前</p></div></div>
-      <ul class="scenes">
-        <li>見えている山の名前が、すぐに分かったら</li>
-        <li>今日は富士山が見えそうか、朝のうちに分かったら</li>
-        <li>登る前に、山頂からの景色を予習できたら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="yama/">アプリを開く</a><a class="btn sub" href="guide/yama.html">くわしく</a></div>
+    <article class="feature reveal app-yama flip" id="yama">
+      <div class="scene yama"><svg viewBox="0 0 500 300" role="img" aria-label="山並みに山の名前が並び、今日は富士山が見えそうと出ている">
+<defs><linearGradient id="yamaSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="yama-s0"/><stop offset="1" class="yama-s1"/></linearGradient></defs>
+<rect width="500" height="300" fill="url(#yamaSky)"/>
+<path d="M-10 170.0 L0 170.0 L10 170.0 L20 170.0 L30 170.0 L40 170.0 L50 170.0 L60 170.0 L70 170.0 L80 169.7 L90 168.8 L100 167.4 L110 165.5 L120 163.2 L130 160.3 L140 157.0 L150 153.3 L160 149.1 L170 144.5 L180 139.4 L190 133.9 L200 128.0 L210 121.6 L220 114.8 L220 114.8 L223 112.7 L226 110.6 L229 108.4 L230 107.6 L232 106.2 L235 103.9 L238 101.6 L240 100.0 L241 99.2 L244 99.2 L247 99.2 L250 99.2 L250 99.2 L253 99.2 L256 99.2 L259 99.2 L260 100.0 L262 101.6 L265 103.9 L268 106.2 L270 107.6 L271 108.4 L274 110.6 L277 112.7 L280 114.8 L280 114.8 L290 121.6 L300 128.0 L310 133.9 L320 139.4 L330 144.5 L340 149.1 L350 153.3 L360 157.0 L370 160.3 L380 161.5 L390 162.2 L400 163.3 L410 164.6 L420 165.9 L430 167.3 L440 168.6 L450 169.6 L460 170.0 L470 170.0 L480 170.0 L490 170.0 L500 170.0 L510 170.0 L510 300 L-10 300 Z" class="yama-r0"/><path d="M208 122.9 L210 121.6 L212 120.3 L214 119.0 L216 117.6 L218 116.2 L220 114.8 L222 113.4 L224 112.0 L226 110.6 L228 109.1 L230 107.6 L232 106.2 L234 104.6 L236 103.1 L238 101.6 L240 100.0 L242 99.2 L244 99.2 L246 99.2 L248 99.2 L250 99.2 L252 99.2 L254 99.2 L256 99.2 L258 99.2 L260 100.0 L262 101.6 L264 103.1 L266 104.6 L268 106.2 L270 107.6 L272 109.1 L274 110.6 L276 112.0 L278 113.4 L280 114.8 L282 116.2 L284 117.6 L286 119.0 L288 120.3 L290 121.6 L292 122.9 L292 125.8 L290 126.2 L288 126.1 L286 125.6 L284 124.7 L282 123.5 L280 122.4 L278 121.3 L276 120.5 L274 120.2 L272 120.3 L270 121.0 L268 122.3 L266 125.1 L264 129.4 L262 133.5 L260 134.7 L258 132.6 L256 129.0 L254 126.2 L252 124.5 L250 123.2 L248 122.0 L246 121.0 L244 120.4 L242 120.2 L240 120.5 L238 121.2 L236 122.2 L234 123.4 L232 124.5 L230 125.5 L228 126.1 L226 126.2 L224 125.9 L222 125.1 L220 124.0 L218 122.9 L216 121.7 L214 121.0 L212 122.3 L210 123.6 L208 124.9 Z" fill="#fff" opacity=".92"/>
+<path d="M-10 202.0 L0 200.8 L10 200.6 L20 200.8 L30 200.7 L40 199.0 L50 194.7 L60 187.4 L70 177.3 L80 165.9 L90 155.3 L100 148.1 L110 145.7 L120 148.7 L130 156.0 L140 165.5 L150 175.0 L160 182.7 L170 187.5 L180 189.3 L190 188.6 L200 186.2 L210 183.4 L220 181.1 L230 180.3 L240 181.5 L250 184.6 L260 189.2 L270 194.5 L280 199.5 L290 203.5 L300 205.8 L310 206.7 L320 206.4 L330 205.7 L340 205.5 L350 206.4 L360 209.0 L370 213.1 L380 218.1 L390 223.2 L400 227.4 L410 229.8 L420 230.1 L430 228.1 L440 224.3 L450 219.5 L460 214.6 L470 210.4 L480 207.4 L490 205.7 L500 204.9 L510 204.3 L510 300 L-10 300 Z" class="yama-r1"/><path d="M-10 236.3 L0 228.3 L10 220.4 L20 214.0 L30 210.1 L40 209.6 L50 212.5 L60 218.4 L70 226.3 L80 234.8 L90 242.6 L100 248.6 L110 251.9 L120 252.2 L130 249.8 L140 245.2 L150 239.4 L160 233.1 L170 227.3 L180 222.6 L190 219.2 L200 217.5 L210 217.3 L220 218.6 L230 221.0 L240 224.4 L250 228.4 L260 232.6 L270 236.8 L280 240.5 L290 243.2 L300 244.6 L310 244.2 L320 241.8 L330 237.1 L340 230.1 L350 221.4 L360 211.7 L370 202.0 L380 193.8 L390 188.3 L400 186.4 L410 188.4 L420 193.9 L430 202.2 L440 212.3 L450 223.0 L460 233.2 L470 242.2 L480 249.1 L490 253.1 L500 253.8 L510 251.0 L510 300 L-10 300 Z" class="yama-r2"/><path d="M-10 271.8 L0 274.1 L10 276.5 L20 278.6 L30 280.2 L40 280.9 L50 280.6 L60 279.3 L70 277.1 L80 274.4 L90 271.4 L100 268.5 L110 266.1 L120 264.2 L130 263.0 L140 262.5 L150 262.5 L160 263.0 L170 263.6 L180 264.3 L190 264.9 L200 265.4 L210 265.8 L220 266.0 L230 266.1 L240 266.2 L250 266.0 L260 265.7 L270 265.0 L280 264.0 L290 262.6 L300 260.8 L310 258.7 L320 256.6 L330 254.5 L340 252.8 L350 251.6 L360 251.2 L370 251.6 L380 252.9 L390 254.8 L400 257.3 L410 260.0 L420 262.8 L430 265.4 L440 267.7 L450 269.6 L460 271.1 L470 272.1 L480 272.7 L490 272.9 L500 272.9 L510 272.7 L510 300 L-10 300 Z" class="yama-r3"/><g class="paint" style="transition-delay:0.40s" transform="translate(241 93)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">富士山</text></g><g class="paint" style="transition-delay:0.75s" transform="translate(110 140)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">大山</text></g><g class="paint" style="transition-delay:1.10s" transform="translate(400 180)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">丹沢山</text></g>
+<g class="paint" style="transition-delay:1.6s"><rect x="288" y="16" width="196" height="34" rx="17" fill="var(--s-card)" stroke="#3f7a45" stroke-opacity=".35"/><text x="386" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#3f7a45">今日の富士山 ◎ 見えそう</text></g>
+</svg></div>
+      <div>
+        <div class="f-head"><div class="mark "><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><div><p class="verb">眺める</p><p class="name">YamaMiru</p></div></div>
+        <p class="voice">あのとがった山、大山っていうのか。</p>
+        <p class="f-text">スマホを向けると、見えている山の名前が山並みに並びます。今日は山が見えそうかも、朝のうちに分かります。</p>
+        <ul class="chips"><li>名山の図鑑と登頂スタンプ</li><li>ダイヤモンド富士さがし</li><li>毎日3つの「今日のお題」</li></ul>
+        <div class="btns"><a class="btn main" href="yama/">開いてみる</a><a class="btn sub" href="guide/yama.html">くわしく</a></div>
+      </div>
     </article>
+  </section>
+
+  <section class="sec reveal" id="keep">
+    <p class="kicker">続けるたのしみ</p>
+    <h2 class="sec-title">出かけた日が、つながっていく。</h2>
+    <p class="sec-lead">4つのアプリのどれかで外に出た日が、ひとつの記録になります。</p>
+    <div class="tiles">
+      <div class="tile"><p class="lab">連続で出かけた日</p><p class="num"><span data-count="12">12</span><small>日</small></p><div class="week"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      <div class="tile"><p class="lab">今週の目標</p><p class="num"><span data-count="18.4" data-dec="1">18.4</span><small>/ 25km</small></p><div class="bar"><b data-w="74%"></b></div></div>
+      <div class="tile wide"><p class="lab">4つにまたがるバッジ</p><div class="badges"><span class="on app-michi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20 L10 12 L13 14 L15 9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="6" r="2" fill="#fff"/></svg></span><span class="on app-megu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 C8 3 6 6 6 9 C6 14 12 20 12 20 C12 20 18 14 18 9 C18 6 16 3 12 3 Z" fill="#fff"/><circle cx="12" cy="9" r="2.4" fill="var(--megu)"/></svg></span><span class="on app-ten"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13 L21 8 L19 11 L10 13 L13 18 L11 18 L7 13.6 L4 14.4 Z" fill="#fff"/></svg></span><span class="on app-yama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19 L9 8 L13 13 L15 11 L22 19 Z" fill="#fff"/></svg></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="tiny">10個のうち4個。歩く・集める・見上げる・眺める、をつなげると増えていきます。</p></div>
+      <div class="tile wide tok app-michi"><p class="lab">バーチャル東海道</p><p class="tokaido-now">日本橋から <b><span data-count="42">42</span>km</b>、戸塚宿のあたり</p><div class="tokaido"><b data-w="8.6%"></b><span class="dot" data-l="8.6%"></span><div class="ends"><span>日本橋</span><span>京都・三条大橋</span></div></div></div>
+    </div>
+    <p class="tiny">数字は例です。</p>
+  </section>
+
+  <section class="sec reveal" id="ride">
+    <p class="kicker">乗り物でも</p>
+    <h2 class="sec-title">乗り物のミル<span class="sub" style="font-size:14px;color:var(--sub);font-weight:400;margin-left:8px">試作</span></h2>
+    <div class="ride">
+      <article class="card app-komu">
+        <div class="card-head"><div class="mark small"><img src="navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><div><p class="name">KomuMiru</p><p class="meta">車で走る・渋滞を比べる</p></div></div>
+        <p class="say">「降りたほうが早い？」が、渋滞の中ですぐ分かる。</p>
+        <div class="btns"><a class="btn main" href="navi/">開いてみる</a><a class="btn sub" href="guide/komu.html">くわしく</a></div>
+      </article>
+      <article class="card app-chari">
+        <div class="card-head"><div class="mark small">チ</div><div><p class="name">ChariMiru</p><p class="meta">自転車で走る・坂と記録</p></div></div>
+        <p class="say">坂の上り下りを見てから、ルートを決める。</p>
+        <div class="btns"><a class="btn main" href="chari/">開いてみる</a><a class="btn sub" href="guide/chari.html">くわしく</a></div>
+      </article>
     </div>
   </section>
 
-  <section>
-    <h2>4つはつながっています</h2>
-    <div class="link-box">
-      <div class="link-icons"><div class="mark small"><img src="walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span class="plus">＋</span><div class="mark small"><img src="megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div class="mark small"><img src="sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><div class="mark small"><img src="yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div></div>
-      <p>別々のアプリですが、同じ場所に記録を置いているので、おたがいの記録を使い合います。</p>
-      <ul class="links">
-        <li><b class="ic">🚶</b><span>MichiMiru で歩くと、通った駅や史跡が MeguMiru に自然に入ります（取り込みの操作はいりません）。</span></li>
-        <li><b class="ic">☀</b><span>MichiMiru の「今日のおすすめ」に、富士山の見え方（YamaMiru）、今夜の宇宙ステーション（TenMiru）、近くのまだ行っていない場所（MeguMiru）がまとめて出ます。そのまま散歩のコースにできます。</span></li>
-        <li><b class="ic">🏁</b><span>散歩を終えると、その間に集めた場所・見上げた飛行機・見つけた山まで1枚のまとめになり、散歩日記に残ります。</span></li>
-        <li><b class="ic">💾</b><span>4つの記録を、1つのファイルにまとめて控えられます。</span></li>
-      </ul>
+  <section class="sec reveal" id="start">
+    <p class="kicker">はじめかた</p>
+    <h2 class="sec-title">外に出るまで、3つだけ。</h2>
+    <ol class="steps3">
+      <li><div><b>アプリを開く</b><small>登録もログインもいりません</small></div></li>
+      <li><div><b>位置情報をゆるす</b><small>いる場所から道や空や山を調べます</small></div></li>
+      <li><div><b>外に出る</b><small>あとは歩くだけ</small></div></li>
+    </ol>
+    <div class="safe">
+      <div><b>無料</b>お金はかかりません</div>
+      <div><b>登録なし</b>名前もメールも不要</div>
+      <div><b>スマホの中</b>記録は運営者に届きません</div>
     </div>
-  </section>
-
-  <section>
-    <h2>乗り物のミル<span class="sub">試作</span></h2>
-    <div class="cards mini">
-    <article class="card app-komu">
-      <div class="card-head"><div class="mark small"><img src="navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><div><p class="name">KomuMiru</p><p class="meta">車で走る・渋滞を比べる</p></div></div>
-      <ul class="scenes">
-        <li>渋滞の中で「降りたほうが早い？」がすぐ分かったら</li>
-        <li>乗るICを、その日の混み具合で選べたら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="navi/">アプリを開く</a><a class="btn sub" href="guide/komu.html">くわしく</a></div>
-    </article>
-    <article class="card app-chari">
-      <div class="card-head"><div class="mark small">チ</div><div><p class="name">ChariMiru</p><p class="meta">自転車で走る・坂と記録</p></div></div>
-      <ul class="scenes">
-        <li>坂の上り下りを見てから、ルートを決められたら</li>
-        <li>走った距離が、東海道や地球一周につながったら</li>
-      </ul>
-      <div class="btns"><a class="btn main" href="chari/">アプリを開く</a><a class="btn sub" href="guide/chari.html">くわしく</a></div>
-    </article>
-    </div>
-  </section>
-
-  <section>
-    <h2>はじめる前に</h2>
-    <div class="box"><ul class="plain">
-      <li>まだ試作中です。画面や機能が変わったり、うまく動かなかったりすることがあります。</li>
-      <li>どれもブラウザで開くアプリ（ウェブアプリ）です。登録やログインはありません。Android の Chrome で確かめています。</li>
-      <li>よく使うアプリは、ブラウザのメニューの「ホーム画面に追加」で、アプリのように開けます。</li>
-      <li>記録は、使っているスマホやパソコンのブラウザの中に保存されます。ほかの端末とは共有されず、運営者の手元にも届きません。大切な記録は、各アプリの「書き出し」で控えを取っておくと安心です。</li>
-      <li>歩きながら、運転しながら画面を見ないでください。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>アプリ版について</h2>
-    <div class="box">
-      <p>ウェブアプリには、スマホの画面を消すと位置の記録が止まるという限りがあります。画面を消してポケットに入れたままでも記録が続く Android のアプリ版を、いま試しています。</p>
-      <p class="note">アプリ版の配布は準備中です。いまはウェブアプリでお使いください。</p>
-    </div>
+    <p class="note">大切な記録は、各アプリの「書き出し」で控えを取っておくと安心です。パソコンでも開けますが、歩いた記録や、空や山にスマホを向ける機能はスマホで使えます。</p>
+    <p class="safety">歩きながら・運転しながら、画面を見ないでください。くわしくは<a href="notes.html">「ご利用にあたって」</a>へ。</p>
   </section>
 </main>
 
