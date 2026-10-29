@@ -17,41 +17,68 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
+<link rel="stylesheet" href="../top.css?v=5">
+<script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
+<script src="../top.js?v=5" defer></script>
 </head>
-<body class="app-chari">
+<body class="app-chari guide">
 <header class="site"><div class="wrap narrow">
   <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">楽しく育成中</span>
 </div></header>
 
 <main class="wrap narrow">
   <p class="warn">走りながら画面を操作しないでください。止まってから操作してください。</p>
-  <div class="hero">
-    <div class="app-title"><div class="mark big">チ</div><h1>ChariMiru<span class="yomi">チャリミル・自転車で走る・坂と記録</span></h1></div>
-    <ul class="scenes">
-      <li>坂の上り下りを見てから、ルートを決められたら</li>
-      <li>着く時刻を、自分の走る速さで知れたら</li>
-      <li>走った距離が、東海道や地球一周につながったら</li>
-    </ul>
-    <p class="lead">ChariMiru は、坂の断面図を見ながらルートを選べる自転車のマップです。走った記録は積み上がって、東海道・シルクロード・地球一周…と、バーチャルの長い旅につながります。</p>
-    <div class="btns"><a class="btn main" href="../chari/">アプリを開く</a></div>
-  </div>
+  <section class="g-hero">
+    <div class="scene chari reveal"><svg viewBox="0 0 500 300" role="img" aria-label="ルートの坂の断面図。上り坂の急さが色で分かり、着く時刻の目安が出ている">
+<rect width="500" height="300" fill="var(--s-bg)"/>
+<g stroke="var(--s-faint)" stroke-width="1"><path d="M0 120 L500 120 M0 170 L500 170 M0 220 L500 220"/></g>
+<path d="M0 219.9 L10 216.0 L10 270 L0 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M10 216.0 L20 212.9 L20 270 L10 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M20 212.9 L30 211.3 L30 270 L20 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M30 211.3 L40 211.4 L40 270 L30 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M40 211.4 L50 213.0 L50 270 L40 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M50 213.0 L60 215.2 L60 270 L50 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M60 215.2 L70 216.9 L70 270 L60 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M70 216.9 L80 217.0 L80 270 L70 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M80 217.0 L90 214.4 L90 270 L80 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M90 214.4 L100 208.7 L100 270 L90 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M100 208.7 L110 199.9 L110 270 L100 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M110 199.9 L120 188.7 L120 270 L110 270 Z" fill="#d9534a" stroke="#d9534a" stroke-width="1"/><path d="M120 188.7 L130 176.3 L130 270 L120 270 Z" fill="#d9534a" stroke="#d9534a" stroke-width="1"/><path d="M130 176.3 L140 164.2 L140 270 L130 270 Z" fill="#d9534a" stroke="#d9534a" stroke-width="1"/><path d="M140 164.2 L150 154.2 L150 270 L140 270 Z" fill="#d9534a" stroke="#d9534a" stroke-width="1"/><path d="M150 154.2 L160 147.6 L160 270 L150 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M160 147.6 L170 145.0 L170 270 L160 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M170 145.0 L180 146.7 L180 270 L170 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M180 146.7 L190 152.0 L190 270 L180 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M190 152.0 L200 159.8 L200 270 L190 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M200 159.8 L210 168.8 L210 270 L200 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M210 168.8 L220 177.5 L220 270 L210 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M220 177.5 L230 185.0 L230 270 L220 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M230 185.0 L240 190.7 L240 270 L230 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M240 190.7 L250 194.6 L250 270 L240 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M250 194.6 L260 197.3 L260 270 L250 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M260 197.3 L270 199.4 L270 270 L260 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M270 199.4 L280 201.5 L280 270 L270 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M280 201.5 L290 203.8 L290 270 L280 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M290 203.8 L300 206.3 L300 270 L290 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M300 206.3 L310 208.2 L310 270 L300 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M310 208.2 L320 208.9 L320 270 L310 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M320 208.9 L330 207.5 L330 270 L320 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M330 207.5 L340 203.7 L340 270 L330 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M340 203.7 L350 197.9 L350 270 L340 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M350 197.9 L360 190.9 L360 270 L350 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M360 190.9 L370 184.0 L370 270 L360 270 Z" fill="#e08a3a" stroke="#e08a3a" stroke-width="1"/><path d="M370 184.0 L380 178.8 L380 270 L370 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M380 178.8 L390 176.4 L390 270 L380 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M390 176.4 L400 177.6 L400 270 L390 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M400 177.6 L410 182.3 L410 270 L400 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M410 182.3 L420 189.7 L420 270 L410 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M420 189.7 L430 198.7 L430 270 L420 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M430 198.7 L440 207.9 L440 270 L430 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M440 207.9 L450 216.0 L450 270 L440 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M450 216.0 L460 221.9 L460 270 L450 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M460 221.9 L470 225.2 L470 270 L460 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M470 225.2 L480 225.8 L480 270 L470 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M480 225.8 L490 224.0 L490 270 L480 270 Z" fill="#5aa98a" stroke="#5aa98a" stroke-width="1"/><path d="M490 224.0 L500 220.7 L500 270 L490 270 Z" fill="#e0b33a" stroke="#e0b33a" stroke-width="1"/><path d="M0 219.9 L10 216.0 L20 212.9 L30 211.3 L40 211.4 L50 213.0 L60 215.2 L70 216.9 L80 217.0 L90 214.4 L100 208.7 L110 199.9 L120 188.7 L130 176.3 L140 164.2 L150 154.2 L160 147.6 L170 145.0 L180 146.7 L190 152.0 L200 159.8 L210 168.8 L220 177.5 L230 185.0 L240 190.7 L250 194.6 L260 197.3 L270 199.4 L280 201.5 L290 203.8 L300 206.3 L310 208.2 L320 208.9 L330 207.5 L340 203.7 L350 197.9 L360 190.9 L370 184.0 L380 178.8 L390 176.4 L400 177.6 L410 182.3 L420 189.7 L430 198.7 L440 207.9 L450 216.0 L460 221.9 L470 225.2 L480 225.8 L490 224.0 L500 220.7" fill="none" stroke="var(--s-ink)" stroke-opacity=".55" stroke-width="2"/>
+<rect x="0" y="270" width="500" height="30" fill="var(--s-card)"/>
+<text x="12" y="290" font-size="12" fill="var(--s-ink)" opacity=".7">0km</text><text x="488" y="290" text-anchor="end" font-size="12" fill="var(--s-ink)" opacity=".7">18km</text>
+<g transform="translate(110 185.8927617211947)"><circle r="11" fill="#fff"/><circle r="7" fill="#3d8b6e"/></g>
+<g class="paint" style="transition-delay:.6s"><rect x="18" y="16" width="150" height="34" rx="17" fill="var(--s-card)" stroke="#3d8b6e" stroke-opacity=".4"/><text x="93" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#3d8b6e">上り 128m</text></g>
+<g class="paint" style="transition-delay:.9s"><rect x="176" y="16" width="150" height="34" rx="17" fill="var(--s-card)" stroke="#3d8b6e" stroke-opacity=".4"/><text x="251" y="38" text-anchor="middle" font-size="14" fill="var(--s-ink)">着く 10:42</text></g>
+</svg></div>
+    <div class="f-head"><div class="mark big">チ</div><div><p class="verb">自転車で走る・坂と記録<span class="trial">試作</span></p><h1 class="g-name">ChariMiru<span class="yomi">チャリミル</span></h1></div></div>
+    <p class="voice">この先の坂、どのくらい上るんだろう？</p>
+    <p class="f-text">ChariMiru は、坂の断面図を見ながらルートを選べる自転車のマップです。走った記録は積み上がって、東海道・シルクロード・地球一周…と、バーチャルの長い旅につながります。</p>
+    <ul class="chips"><li>坂の断面図と勾配の色</li><li>自分の速さで着く時刻</li><li>東海道から地球一周、そして月へ</li></ul>
+    <div class="btns"><a class="btn main" href="../chari/">開いてみる</a><a class="btn sub" href="#howto">遊び方</a></div>
+  </section>
 
   <p class="pc-note">パソコンでは、ルート作り・坂の断面図・共有リンク・走った記録の表示が使えます。走るときはスマホで使ってください。</p>
 
-  <section>
-    <h2>楽しみ方</h2>
-    <div class="box"><ol class="steps">
-      <li>アプリを開いて、自転車の種類（ロード・クロス・街乗り・電動）と好みを選びます。</li>
-      <li>出発地・目的地（経由地も）を決めると、ルートと坂の断面図、着く時刻の目安が出ます。共有リンクで人に送れます。</li>
-      <li>「▶ 走る」で走行モード。曲がり角や坂の手前を声で案内し、速さ・距離を記録します。</li>
-      <li>走った記録は履歴に残り、合計の距離がバーチャルの旅を進めます。マスの塗りつぶし・峠のスタンプ・バッジもあります。</li>
-    </ol></div>
+  <section class="sec reveal">
+    <p class="kicker">こんな場面で</p>
+    <ol class="moments">
+      <li><p class="m-when">ルートを決めるとき</p><p class="m-what">坂の断面図を見て、上りの少ない道を選ぶ。どこが急かは色で分かる。</p></li>
+      <li><p class="m-when">走っている間</p><p class="m-what">曲がり角や坂の手前を声で案内。止まると、記録も自動で一時停止。</p></li>
+      <li><p class="m-when">走り終えたら</p><p class="m-what">合計の距離がバーチャルの旅を進める。東海道のあとは、ルート66、シルクロード…。</p></li>
+    </ol>
   </section>
 
-  <section>
-    <h2>できること</h2>
-    <div class="box"><ul class="plain">
+  <section class="sec reveal" id="howto">
+    <p class="kicker">遊び方</p>
+    <h2 class="sec-title">3つで、はじめられます。</h2>
+    <ol class="steps3">
+      <li><div><b>自転車の種類と好みを選ぶ</b><small>ロード・クロス・街乗り・電動</small></div></li>
+      <li><div><b>出発地と目的地を決める</b><small>ルートと坂の断面図、着く時刻の目安</small></div></li>
+      <li><div><b>「走る」で走行モード</b><small>速さと距離を記録し、旅が進みます</small></div></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">これから育てるところ</p>
+    <div class="box"><ul class="tags">
+      <li><span class="tag wip">実装中</span><span>公開に向けた準備（ルート検索のしくみの見直し）</span></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" id="more">
+    <p class="kicker">くわしい情報</p>
+    <p class="sec-lead">押すと開きます。</p>
+    <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>ルート検索（出発・経由・目的、自転車の種類と好み）と、坂の断面図・勾配の色分け</li>
       <li>着く時刻の目安（坂の分も考え、走った記録から自分の速さを学ぶ）</li>
       <li>ルートの共有リンク、GPX の書き出し・読み込み</li>
@@ -59,46 +86,37 @@
       <li>走った記録（総走行距離・月ごとのグラフ）、マス塗り・峠のスタンプ帳・バッジ</li>
       <li>バーチャルの長い旅（東海道 → ルート66 → シルクロード → シベリア鉄道 → 日本一周 → 地球一周 → 月）</li>
       <li>心拍・スピード・ケイデンスのセンサー（Bluetooth。対応するブラウザだけ）</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>これから</h2>
-    <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span><span>公開に向けた準備（ルート検索のしくみの見直し）</span></li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>使う端末と許可</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>使う端末と許可</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>スマホ向けです。Android の Chrome で確かめています。iPhone でも使えます（センサーは対応するブラウザが必要です）。</li>
       <li>位置情報：走った道と速さを記録し、案内するために使います。</li>
       <li>画面のスリープ防止：走っている間に画面が消えないようにします。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>できないこと・ずれること</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>ルートは地図データ（OpenStreetMap）から計算しています。走りにくい道が入ることがあります。</li>
       <li>アプリを開いたまま、画面を点けたままでないと記録と案内が止まります。</li>
       <li>着く時刻は目安です。信号や向かい風は考えていません。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>記録について</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>記録について</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>走った記録・設定は、使っている端末の中にだけ保存します。GPX の書き出しで控えを取れます。</li>
       <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
-    </ul></div>
+    </ul></div></div></details>
+    <details class="more"><summary>出典</summary><div class="more-body"><p class="note">地図：Mapbox／ルート：OpenRouteService、© OpenStreetMap contributors／標高：国土地理院</p></div></details>
   </section>
 
-  <section>
-    <h2>出典</h2>
-    <p class="note">地図：Mapbox／ルート：OpenRouteService、© OpenStreetMap contributors／標高：国土地理院</p>
-    <div class="btns"><a class="btn main" href="../chari/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  <section class="sec reveal">
+    <div class="btns"><a class="btn main" href="../chari/">ChariMiru を開いてみる</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">ほかのミルも</p>
+    <div class="others">
+      <a class="other app-michi" href="michi.html"><div class="mark small"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span><b>MichiMiru</b><small>歩く</small></span></a>
+      <a class="other app-megu" href="megu.html"><div class="mark small"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><span><b>MeguMiru</b><small>めぐる</small></span></a>
+      <a class="other app-ten" href="ten.html"><div class="mark small"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><span><b>TenMiru</b><small>見上げる</small></span></a>
+      <a class="other app-yama" href="yama.html"><div class="mark small"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><span><b>YamaMiru</b><small>眺める</small></span></a>
+      <a class="other app-komu" href="komu.html"><div class="mark small"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><span><b>KomuMiru</b><small>車で走る</small></span></a>
+    </div>
   </section>
 </main>
 

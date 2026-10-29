@@ -17,40 +17,67 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
+<link rel="stylesheet" href="../top.css?v=5">
+<script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
+<script src="../top.js?v=5" defer></script>
 </head>
-<body class="app-yama">
+<body class="app-yama guide">
 <header class="site"><div class="wrap narrow">
   <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">楽しく育成中</span>
 </div></header>
 
 <main class="wrap narrow">
-  <div class="hero">
-    <div class="app-title"><div class="mark big"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><h1>YamaMiru<span class="yomi">ヤマミル・眺める・見えている山の名前</span></h1></div>
-    <ul class="scenes">
-      <li>見えている山の名前が、すぐに分かったら</li>
-      <li>今日は富士山が見えそうか、朝のうちに分かったら</li>
-      <li>登る前に、山頂からの景色を予習できたら</li>
-    </ul>
-    <p class="lead">YamaMiru は、いる場所から見える山並みを描いて、山の名前が分かるアプリです。スマホを山に向けると正面の山が分かり、見つけた山は図鑑に集まっていきます。登らなくても、毎日の景色の中で山と仲よくなれます。</p>
-    <div class="btns"><a class="btn main" href="../yama/">アプリを開く</a></div>
-  </div>
+
+  <section class="g-hero">
+    <div class="scene yama reveal"><svg viewBox="0 0 500 300" role="img" aria-label="山並みに山の名前が並び、今日は富士山が見えそうと出ている">
+<defs><linearGradient id="yamaSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="yama-s0"/><stop offset="1" class="yama-s1"/></linearGradient></defs>
+<rect width="500" height="300" fill="url(#yamaSky)"/>
+<path d="M-10 170.0 L0 170.0 L10 170.0 L20 170.0 L30 170.0 L40 170.0 L50 170.0 L60 170.0 L70 170.0 L80 169.7 L90 168.8 L100 167.4 L110 165.5 L120 163.2 L130 160.3 L140 157.0 L150 153.3 L160 149.1 L170 144.5 L180 139.4 L190 133.9 L200 128.0 L210 121.6 L220 114.8 L220 114.8 L223 112.7 L226 110.6 L229 108.4 L230 107.6 L232 106.2 L235 103.9 L238 101.6 L240 100.0 L241 99.2 L244 99.2 L247 99.2 L250 99.2 L250 99.2 L253 99.2 L256 99.2 L259 99.2 L260 100.0 L262 101.6 L265 103.9 L268 106.2 L270 107.6 L271 108.4 L274 110.6 L277 112.7 L280 114.8 L280 114.8 L290 121.6 L300 128.0 L310 133.9 L320 139.4 L330 144.5 L340 149.1 L350 153.3 L360 157.0 L370 160.3 L380 161.5 L390 162.2 L400 163.3 L410 164.6 L420 165.9 L430 167.3 L440 168.6 L450 169.6 L460 170.0 L470 170.0 L480 170.0 L490 170.0 L500 170.0 L510 170.0 L510 300 L-10 300 Z" class="yama-r0"/><path d="M208 122.9 L210 121.6 L212 120.3 L214 119.0 L216 117.6 L218 116.2 L220 114.8 L222 113.4 L224 112.0 L226 110.6 L228 109.1 L230 107.6 L232 106.2 L234 104.6 L236 103.1 L238 101.6 L240 100.0 L242 99.2 L244 99.2 L246 99.2 L248 99.2 L250 99.2 L252 99.2 L254 99.2 L256 99.2 L258 99.2 L260 100.0 L262 101.6 L264 103.1 L266 104.6 L268 106.2 L270 107.6 L272 109.1 L274 110.6 L276 112.0 L278 113.4 L280 114.8 L282 116.2 L284 117.6 L286 119.0 L288 120.3 L290 121.6 L292 122.9 L292 125.8 L290 126.2 L288 126.1 L286 125.6 L284 124.7 L282 123.5 L280 122.4 L278 121.3 L276 120.5 L274 120.2 L272 120.3 L270 121.0 L268 122.3 L266 125.1 L264 129.4 L262 133.5 L260 134.7 L258 132.6 L256 129.0 L254 126.2 L252 124.5 L250 123.2 L248 122.0 L246 121.0 L244 120.4 L242 120.2 L240 120.5 L238 121.2 L236 122.2 L234 123.4 L232 124.5 L230 125.5 L228 126.1 L226 126.2 L224 125.9 L222 125.1 L220 124.0 L218 122.9 L216 121.7 L214 121.0 L212 122.3 L210 123.6 L208 124.9 Z" fill="#fff" opacity=".92"/>
+<path d="M-10 202.0 L0 200.8 L10 200.6 L20 200.8 L30 200.7 L40 199.0 L50 194.7 L60 187.4 L70 177.3 L80 165.9 L90 155.3 L100 148.1 L110 145.7 L120 148.7 L130 156.0 L140 165.5 L150 175.0 L160 182.7 L170 187.5 L180 189.3 L190 188.6 L200 186.2 L210 183.4 L220 181.1 L230 180.3 L240 181.5 L250 184.6 L260 189.2 L270 194.5 L280 199.5 L290 203.5 L300 205.8 L310 206.7 L320 206.4 L330 205.7 L340 205.5 L350 206.4 L360 209.0 L370 213.1 L380 218.1 L390 223.2 L400 227.4 L410 229.8 L420 230.1 L430 228.1 L440 224.3 L450 219.5 L460 214.6 L470 210.4 L480 207.4 L490 205.7 L500 204.9 L510 204.3 L510 300 L-10 300 Z" class="yama-r1"/><path d="M-10 236.3 L0 228.3 L10 220.4 L20 214.0 L30 210.1 L40 209.6 L50 212.5 L60 218.4 L70 226.3 L80 234.8 L90 242.6 L100 248.6 L110 251.9 L120 252.2 L130 249.8 L140 245.2 L150 239.4 L160 233.1 L170 227.3 L180 222.6 L190 219.2 L200 217.5 L210 217.3 L220 218.6 L230 221.0 L240 224.4 L250 228.4 L260 232.6 L270 236.8 L280 240.5 L290 243.2 L300 244.6 L310 244.2 L320 241.8 L330 237.1 L340 230.1 L350 221.4 L360 211.7 L370 202.0 L380 193.8 L390 188.3 L400 186.4 L410 188.4 L420 193.9 L430 202.2 L440 212.3 L450 223.0 L460 233.2 L470 242.2 L480 249.1 L490 253.1 L500 253.8 L510 251.0 L510 300 L-10 300 Z" class="yama-r2"/><path d="M-10 271.8 L0 274.1 L10 276.5 L20 278.6 L30 280.2 L40 280.9 L50 280.6 L60 279.3 L70 277.1 L80 274.4 L90 271.4 L100 268.5 L110 266.1 L120 264.2 L130 263.0 L140 262.5 L150 262.5 L160 263.0 L170 263.6 L180 264.3 L190 264.9 L200 265.4 L210 265.8 L220 266.0 L230 266.1 L240 266.2 L250 266.0 L260 265.7 L270 265.0 L280 264.0 L290 262.6 L300 260.8 L310 258.7 L320 256.6 L330 254.5 L340 252.8 L350 251.6 L360 251.2 L370 251.6 L380 252.9 L390 254.8 L400 257.3 L410 260.0 L420 262.8 L430 265.4 L440 267.7 L450 269.6 L460 271.1 L470 272.1 L480 272.7 L490 272.9 L500 272.9 L510 272.7 L510 300 L-10 300 Z" class="yama-r3"/><g class="paint" style="transition-delay:0.40s" transform="translate(241 93)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">富士山</text></g><g class="paint" style="transition-delay:0.75s" transform="translate(110 140)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">大山</text></g><g class="paint" style="transition-delay:1.10s" transform="translate(400 180)"><line y2="-30" stroke="var(--s-ink)" stroke-opacity=".5"/><rect x="-34" y="-58" width="68" height="26" rx="13" fill="var(--s-card)"/><text y="-40" text-anchor="middle" font-size="13" font-weight="700" fill="#3f7a45">丹沢山</text></g>
+<g class="paint" style="transition-delay:1.6s"><rect x="288" y="16" width="196" height="34" rx="17" fill="var(--s-card)" stroke="#3f7a45" stroke-opacity=".35"/><text x="386" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#3f7a45">今日の富士山 ◎ 見えそう</text></g>
+</svg></div>
+    <div class="f-head"><div class="mark big"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><div><p class="verb">眺める・見えている山の名前</p><h1 class="g-name">YamaMiru<span class="yomi">ヤマミル</span></h1></div></div>
+    <p class="voice">あのとがった山、大山っていうのか。</p>
+    <p class="f-text">YamaMiru は、いる場所から見える山並みを描いて、山の名前が分かるアプリです。スマホを山に向けると正面の山が分かり、見つけた山は図鑑に集まっていきます。登らなくても、毎日の景色の中で山と仲よくなれます。</p>
+    <ul class="chips"><li>名山の図鑑と登頂スタンプ</li><li>ダイヤモンド富士さがし</li><li>毎日3つの「今日のお題」</li></ul>
+    <div class="btns"><a class="btn main" href="../yama/">開いてみる</a><a class="btn sub" href="#howto">遊び方</a></div>
+  </section>
 
   <p class="pc-note">パソコンでは、地図で場所を選んで、そこから見える山並み・図鑑・予報・星空を見られます。スマホを山に向ける機能とカメラは、スマホで使えます。</p>
 
-  <section>
-    <h2>楽しみ方</h2>
-    <div class="box"><ol class="steps">
-      <li>アプリを開いて位置情報を許可すると、いる場所から見える山並みを計算して、画面のいちばん上に描きます。初めての場所では少し時間がかかります。</li>
-      <li>山並みの山名を押すと、標高や距離、山の説明が見られます。</li>
-      <li>「向きに合わせる」を押してスマホを山に向けると、正面の山が分かります。山名を中央の線に2秒合わせると、図鑑に入ります。</li>
-      <li>画面の下の「☀ 今日」で、今日は山が見えそうかの予報と、今日のお題を確かめられます。夜は「🌌 星空」で、山並みの上に昇る星座や月を見られます。</li>
-    </ol></div>
+  <section class="sec reveal">
+    <p class="kicker">こんな場面で</p>
+    <ol class="moments">
+      <li><p class="m-when">朝</p><p class="m-what">「今日」で、山が見えそうかを確かめる。見えそうな日は、少し遠回りして高台へ。</p></li>
+      <li><p class="m-when">高台で</p><p class="m-what">「向きに合わせる」でスマホを向けると、正面の山の名前が分かる。中央の線に2秒合わせて、図鑑にひとつ。</p></li>
+      <li><p class="m-when">夕方から夜</p><p class="m-what">山頂に太陽が重なる日を探して、ダイヤモンド富士を待つ。夜は山並みの上に星座が昇る。</p></li>
+    </ol>
   </section>
 
-  <section>
-    <h2>できること</h2>
-    <div class="box"><ul class="plain">
+  <section class="sec reveal" id="howto">
+    <p class="kicker">遊び方</p>
+    <h2 class="sec-title">3つで、はじめられます。</h2>
+    <ol class="steps3">
+      <li><div><b>開いて位置情報をゆるす</b><small>いる場所から見える山並みを描きます</small></div></li>
+      <li><div><b>スマホを山に向ける</b><small>「向きに合わせる」で正面の山が分かります</small></div></li>
+      <li><div><b>図鑑とお題を集める</b><small>見つけた山と、毎日3つの「今日のお題」</small></div></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">これから育てるところ</p>
+    <div class="box"><ul class="tags">
+      <li><span class="tag wip">実装中</span><span>カメラの映像から山並みの線を自動で合わせる（実験）</span></li>
+      <li><span class="tag wip">実装中</span><span>iPhone での動作の確認</span></li>
+      <li><span class="tag plan">予定</span><span>山の一覧を前もって用意して、初めての場所でも早く表示</span></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" id="more">
+    <p class="kicker">くわしい情報</p>
+    <p class="sec-lead">押すと開きます。</p>
+    <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>いる場所から見える山並みと、山の名前</li>
       <li>スマホを向けた方向の山が分かる。カメラの映像に山並みの線と山名を重ねる</li>
       <li>見つけた山の図鑑（レア度・点数・バッジ、日本百名山などの名山リスト）</li>
@@ -60,51 +87,40 @@
       <li>今日は山が見えそうかの予報、お気に入りの場所、見えた記録のカレンダー</li>
       <li>毎日3つの「今日のお題」</li>
       <li>ホーム画面に追加、記録の書き出し・読み込み</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>これから</h2>
-    <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span><span>カメラの映像から山並みの線を自動で合わせる（実験）</span></li>
-      <li><span class="tag wip">実装中</span><span>iPhone での動作の確認</span></li>
-      <li><span class="tag plan">予定</span><span>山の一覧を前もって用意して、初めての場所でも早く表示</span></li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>使う端末と許可</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>使う端末と許可</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>スマホ向けです。Android の Chrome で確かめています。iPhone は確認中です。</li>
       <li>位置情報：いる場所から見える山並みを計算するために使います。断ったときは、地図で場所を選べます。</li>
       <li>向きのセンサー：スマホが向いている方角を知るために使います（「向きに合わせる」とカメラのとき）。</li>
       <li>カメラ：景色の映像に山並みの線と山名を重ねるために使います。映像は保存も送信もしません。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>できないこと・ずれること</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>山並みは国土地理院の標高データから計算しています。手前の木や建物は計算に入らないので、実際には見えない山が出ることがあります。</li>
       <li>遠くの山は、かすみや雲で見えない日もあります。</li>
       <li>山の名前は Wikidata と OpenStreetMap のデータです。載っていない山や、呼び名の違う山があります。</li>
       <li>方角はスマホのセンサー任せなので、ずれることがあります。画面の補正で合わせられます。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>記録について</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>記録について</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>図鑑・お題・見えた記録・お気に入りの場所は、使っている端末の中にだけ保存します。</li>
       <li>図鑑の画面のいちばん下で、ファイルへの書き出しと読み込みができます。</li>
       <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
-    </ul></div>
+    </ul></div></div></details>
+    <details class="more"><summary>出典</summary><div class="more-body"><p class="note">標高：国土地理院／山の名前：Wikidata、© OpenStreetMap contributors／山の説明：Wikipedia／天気：Open-Meteo（CC BY 4.0）／天体の計算：Astronomy Engine／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／地図：Mapbox</p></div></details>
   </section>
 
-  <section>
-    <h2>出典</h2>
-    <p class="note">標高：国土地理院／山の名前：Wikidata、© OpenStreetMap contributors／山の説明：Wikipedia／天気：Open-Meteo（CC BY 4.0）／天体の計算：Astronomy Engine／星座の線：d3-celestial（Olaf Frohn、BSD 3-Clause）／地図：Mapbox</p>
-    <div class="btns"><a class="btn main" href="../yama/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  <section class="sec reveal">
+    <div class="btns"><a class="btn main" href="../yama/">YamaMiru を開いてみる</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">ほかのミルも</p>
+    <div class="others">
+      <a class="other app-michi" href="michi.html"><div class="mark small"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span><b>MichiMiru</b><small>歩く</small></span></a>
+      <a class="other app-megu" href="megu.html"><div class="mark small"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><span><b>MeguMiru</b><small>めぐる</small></span></a>
+      <a class="other app-ten" href="ten.html"><div class="mark small"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><span><b>TenMiru</b><small>見上げる</small></span></a>
+      <a class="other app-komu" href="komu.html"><div class="mark small"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><span><b>KomuMiru</b><small>車で走る</small></span></a>
+      <a class="other app-chari" href="chari.html"><div class="mark small">チ</div><span><b>ChariMiru</b><small>自転車で走る</small></span></a>
+    </div>
   </section>
 </main>
 

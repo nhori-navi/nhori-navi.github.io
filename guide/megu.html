@@ -17,40 +17,66 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
+<link rel="stylesheet" href="../top.css?v=5">
+<script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
+<script src="../top.js?v=5" defer></script>
 </head>
-<body class="app-megu">
+<body class="app-megu guide">
 <header class="site"><div class="wrap narrow">
   <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">楽しく育成中</span>
 </div></header>
 
 <main class="wrap narrow">
-  <div class="hero">
-    <div class="app-title"><div class="mark big"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><h1>MeguMiru<span class="yomi">メグミル・めぐる・行った場所を集める</span></h1></div>
-    <ul class="scenes">
-      <li>通った駅や町が、何もしなくても記録されていたら</li>
-      <li>近くに「まだ行っていない史跡」があると知れたら</li>
-      <li>行きたい場所のまわりの「まだ」が、ひと目で分かったら</li>
-    </ul>
-    <p class="lead">MeguMiru は、行った場所で、駅・市区町村・道の駅・ミュージアム・史跡（城跡・古墳）と、乗った路線の区間を同時に集めるアプリです。全部集めるより、「ここにこんなのがあったんだ」という発見を大切にしています。</p>
-    <div class="btns"><a class="btn main" href="../megu/">アプリを開く</a></div>
-  </div>
+
+  <section class="g-hero">
+    <div class="scene megu reveal"><svg viewBox="0 0 500 300" role="img" aria-label="歩いた道ぞいの駅や史跡が集まり、まわりにまだ行っていない場所がうっすら見える地図">
+<rect width="500" height="300" fill="var(--s-bg)"/><circle cx="140" cy="187" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="72" cy="211" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="265" cy="149" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="66" cy="127" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="30" cy="212" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="301" cy="184" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="429" cy="125" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="133" cy="243" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="294" cy="202" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="161" cy="154" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="443" cy="137" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="154" cy="164" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="33" cy="274" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="433" cy="176" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="429" cy="179" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/><circle cx="119" cy="152" r="8" fill="none" stroke="var(--s-faint)" stroke-width="2.5"/>
+<path d="M-10 250 C80 240 110 180 190 190 S300 260 360 200 S440 130 510 150" fill="none" stroke="#7a5c8e" stroke-opacity=".45" stroke-width="7" stroke-linecap="round"/><g class="paint" style="transition-delay:0.30s"><circle cx="60" cy="238" r="17" fill="#7a5c8e"/><circle cx="60" cy="238" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="60" y="243" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">駅</text></g><g class="paint" style="transition-delay:0.55s"><circle cx="190" cy="190" r="17" fill="#7a5c8e"/><circle cx="190" cy="190" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="190" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">町</text></g><g class="paint" style="transition-delay:0.80s"><circle cx="285" cy="232" r="17" fill="#7a5c8e"/><circle cx="285" cy="232" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="285" y="237" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">史</text></g><g class="paint" style="transition-delay:1.05s"><circle cx="360" cy="200" r="17" fill="#7a5c8e"/><circle cx="360" cy="200" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="360" y="205" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">館</text></g><g class="paint" style="transition-delay:1.30s"><circle cx="452" cy="146" r="17" fill="#7a5c8e"/><circle cx="452" cy="146" r="17" fill="none" stroke="#fff" stroke-width="3"/><text x="452" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">駅</text></g>
+<g class="paint" style="transition-delay:1.7s"><rect x="18" y="16" width="304" height="62" rx="14" fill="var(--s-card)" stroke="#7a5c8e" stroke-opacity=".35"/>
+<text x="34" y="40" font-size="13" fill="var(--s-ink)" opacity=".7">今日あつめた場所</text>
+<text x="34" y="64" font-size="16" font-weight="700" fill="#7a5c8e">駅 2・町 1・史跡 1・ミュージアム 1</text></g>
+</svg></div>
+    <div class="f-head"><div class="mark big"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><div><p class="verb">めぐる・行った場所を集める</p><h1 class="g-name">MeguMiru<span class="yomi">メグミル</span></h1></div></div>
+    <p class="voice">歩いただけなのに、駅が3つ増えてる。</p>
+    <p class="f-text">MeguMiru は、行った場所で、駅・市区町村・道の駅・ミュージアム・史跡と、乗った路線の区間を同時に集めるアプリです。全部集めるより、「ここにこんなのがあったんだ」という発見を大切にしています。</p>
+    <ul class="chips"><li>6つの棚を同時に集める</li><li>行き先のまわりの「まだ」</li><li>場所のひとこと説明</li></ul>
+    <div class="btns"><a class="btn main" href="../megu/">開いてみる</a><a class="btn sub" href="#howto">遊び方</a></div>
+  </section>
 
   <p class="pc-note">パソコンでは、地図・図鑑・ふりかえり・行き先ピンが使えます。場所の記録はパソコンの位置が粗いため、スマホで使ってください。</p>
 
-  <section>
-    <h2>楽しみ方</h2>
-    <div class="box"><ol class="steps">
-      <li>アプリを開いて位置情報を許可します。開いている間に近くを通った場所が、自動で記録されます。</li>
-      <li>MichiMiru で歩いた記録や、記録アプリの GPX ファイルからも、さかのぼって集まります。</li>
-      <li>地図には、行った所がピン、まだの所が薄い丸で出ます。歩いていて近くにまだ行っていない場所があると知らせます。</li>
-      <li>図鑑で棚ごと・路線ごとの集まり具合を、「今日」でその日や月のふりかえりを見られます。行きたい場所に「行き先ピン」を立てると、そのまわりのまだの場所が分かります。</li>
-    </ol></div>
+  <section class="sec reveal">
+    <p class="kicker">こんな場面で</p>
+    <ol class="moments">
+      <li><p class="m-when">電車で出かけた日</p><p class="m-what">通った駅と町が、開いているだけで記録される。乗った区間は、路線ごとに塗られていく。</p></li>
+      <li><p class="m-when">散歩の途中</p><p class="m-what">「近くに、まだ行っていない史跡があります」。少し寄り道して、ひとつ集まる。</p></li>
+      <li><p class="m-when">次の行き先を考えるとき</p><p class="m-what">地図に「行き先ピン」を立てると、まわり5kmのまだの場所と、まだ乗っていない区間が分かる。</p></li>
+    </ol>
   </section>
 
-  <section>
-    <h2>できること</h2>
-    <div class="box"><ul class="plain">
+  <section class="sec reveal" id="howto">
+    <p class="kicker">遊び方</p>
+    <h2 class="sec-title">3つで、はじめられます。</h2>
+    <ol class="steps3">
+      <li><div><b>開いて位置情報をゆるす</b><small>近くを通った場所が、自動で記録されます</small></div></li>
+      <li><div><b>MichiMiru で歩く</b><small>歩いた記録からも、さかのぼって集まります</small></div></li>
+      <li><div><b>図鑑とふりかえりを見る</b><small>棚ごと・路線ごとの集まり具合と、今日・月ごとのふりかえり</small></div></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">これから育てるところ</p>
+    <div class="box"><ul class="tags">
+      <li><span class="tag plan">予定</span><span>場所の写真</span></li>
+      <li><span class="tag plan">予定</span><span>対象の地域を広げる（いまは関東甲信越の10都県）</span></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" id="more">
+    <p class="kicker">くわしい情報</p>
+    <p class="sec-lead">押すと開きます。</p>
+    <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>6つの棚：駅（通過／降車）、市区町村（通過／訪問）、道の駅、ミュージアム（美術館・博物館・科学館・資料館）、史跡（城跡・古墳、日本100名城・続100名城の印）、路線の乗りつぶし</li>
       <li>地下の駅も、地下駅の判定・路線からの推定・「いまここ」ボタンで集められる</li>
       <li>近くのまだ行っていない場所の知らせ（同じ場所は12時間に1回）</li>
@@ -58,50 +84,40 @@
       <li>今日・月ごとのふりかえりとカレンダー</li>
       <li>行き先ピン：地図のどこにでも立てられ、まわり5km のまだの場所と、まだ乗っていない区間が分かる</li>
       <li>MichiMiru の記録・GPX ファイルの読み込み、書き出し・読み込み</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>これから</h2>
-    <div class="box"><ul class="tags">
-      <li><span class="tag plan">予定</span><span>場所の写真</span></li>
-      <li><span class="tag plan">予定</span><span>対象の地域を広げる（いまは関東甲信越の10都県）</span></li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>使う端末と許可</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>使う端末と許可</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>スマホ向けです。Android の Chrome で確かめています。</li>
       <li>対象の地域は、関東甲信越の10都県（東京・神奈川・埼玉・千葉・茨城・栃木・群馬・山梨・長野・新潟）です。</li>
       <li>位置情報：近くの場所を記録し、まだ行っていない場所を知らせるために使います。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>できないこと・ずれること</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>アプリを開いている間だけ記録します。閉じていた間は、MichiMiru の記録や GPX ファイルで補ってください。</li>
       <li>場所のデータは OpenStreetMap から毎月作り直しています。載っていない場所や、名前の違う場所があります。</li>
       <li>市区町村の境目の近くでは、隣の市区町村と判定されることがあります。</li>
       <li>地下やトンネルの区間は、路線から推定しています。</li>
       <li>催し（フリマなど）の予定を出す機能は、いまは作者の個人の利用の範囲でだけ使っています。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>記録について</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>記録について</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>集めた場所・行き先ピンなどは、使っている端末の中にだけ保存します。</li>
       <li>設定から、ファイルへの書き出しと読み込みができます。</li>
       <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
-    </ul></div>
+    </ul></div></div></details>
+    <details class="more"><summary>出典</summary><div class="more-body"><p class="note">地図：Mapbox、© OpenStreetMap contributors／駅・道の駅・ミュージアム・史跡・路線・線路の形：© OpenStreetMap contributors（ODbL）／一言説明・名城の位置の一部：Wikipedia（CC BY-SA 4.0）／名城：公益財団法人日本城郭協会「日本100名城」「続日本100名城」／市区町村の境目：国土数値情報（行政区域データ）国土交通省（スマートニュース メディア研究所が簡素化したもの）を加工</p></div></details>
   </section>
 
-  <section>
-    <h2>出典</h2>
-    <p class="note">地図：Mapbox、© OpenStreetMap contributors／駅・道の駅・ミュージアム・史跡・路線・線路の形：© OpenStreetMap contributors（ODbL）／一言説明・名城の位置の一部：Wikipedia（CC BY-SA 4.0）／名城：公益財団法人日本城郭協会「日本100名城」「続日本100名城」／市区町村の境目：国土数値情報（行政区域データ）国土交通省（スマートニュース メディア研究所が簡素化したもの）を加工</p>
-    <div class="btns"><a class="btn main" href="../megu/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  <section class="sec reveal">
+    <div class="btns"><a class="btn main" href="../megu/">MeguMiru を開いてみる</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">ほかのミルも</p>
+    <div class="others">
+      <a class="other app-michi" href="michi.html"><div class="mark small"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span><b>MichiMiru</b><small>歩く</small></span></a>
+      <a class="other app-ten" href="ten.html"><div class="mark small"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><span><b>TenMiru</b><small>見上げる</small></span></a>
+      <a class="other app-yama" href="yama.html"><div class="mark small"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><span><b>YamaMiru</b><small>眺める</small></span></a>
+      <a class="other app-komu" href="komu.html"><div class="mark small"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><span><b>KomuMiru</b><small>車で走る</small></span></a>
+      <a class="other app-chari" href="chari.html"><div class="mark small">チ</div><span><b>ChariMiru</b><small>自転車で走る</small></span></a>
+    </div>
   </section>
 </main>
 

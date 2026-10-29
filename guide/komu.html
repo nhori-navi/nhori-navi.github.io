@@ -17,41 +17,70 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
+<link rel="stylesheet" href="../top.css?v=5">
+<script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
+<script src="../top.js?v=5" defer></script>
 </head>
-<body class="app-komu">
+<body class="app-komu guide">
 <header class="site"><div class="wrap narrow">
   <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">楽しく育成中</span>
 </div></header>
 
 <main class="wrap narrow">
   <p class="warn">運転中は操作しないでください。操作は停車中か、同乗の方にお願いします。</p>
-  <div class="hero">
-    <div class="app-title"><div class="mark big"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><h1>KomuMiru<span class="yomi">コムミル・車で走る・渋滞を比べる</span></h1></div>
-    <ul class="scenes">
-      <li>渋滞の中で「降りたほうが早い？」がすぐ分かったら</li>
-      <li>乗るICを、その日の混み具合で選べたら</li>
-      <li>少し遠回りでも、結局早く着く道を選べたら</li>
-    </ul>
-    <p class="lead">KomuMiru は、いくつかの道を同時に計算して、どれがいちばん早く着きそうかを比べて見せるカーナビです。遠回りの分や、右折・信号の多さも差し引いて考えます。</p>
-    <div class="btns"><a class="btn main" href="../navi/">アプリを開く</a></div>
-  </div>
+  <section class="g-hero">
+    <div class="scene komu reveal"><svg viewBox="0 0 500 300" role="img" aria-label="高速道路の渋滞が色で分かり、このまま行く場合と次のICで降りる場合の時間を比べている">
+<rect width="500" height="300" fill="var(--s-bg)"/>
+<g stroke="var(--s-street)" stroke-width="8" fill="none" stroke-linecap="round"><path d="M-10 120 L510 150"/><path d="M90 -10 L120 310"/><path d="M330 -10 L300 310"/><path d="M-10 260 L510 236"/></g>
+<path d="M-10 210 C60 200 110 180 160 170 S240 150 280 138 S440 88 510 74" fill="none" stroke="var(--s-card)" stroke-width="20" stroke-linecap="round"/><path d="M-10 210 C60 200 110 180 160 170" fill="none" stroke="#3aa76d" stroke-width="12" stroke-linecap="round"/><path d="M160 170 C210 160 240 150 280 138" fill="none" stroke="#e0a23a" stroke-width="12" stroke-linecap="round"/><path d="M280 138 C320 126 360 112 400 100" fill="none" stroke="#d9534a" stroke-width="12" stroke-linecap="round"/><path d="M400 100 C440 88 470 80 510 74" fill="none" stroke="#d9534a" stroke-width="12" stroke-linecap="round"/>
+<path class="paint" style="transition-delay:.6s" d="M280 138 C300 170 330 200 380 214 S460 222 510 214" fill="none" stroke="#c9663f" stroke-width="6" stroke-dasharray="2 11" stroke-linecap="round"/>
+<g transform="translate(280 138)"><circle r="12" fill="var(--s-card)" stroke="#c9663f" stroke-width="3"/><text y="5" text-anchor="middle" font-size="12" font-weight="700" fill="#c9663f">IC</text></g>
+<g transform="translate(176 166)"><circle r="10" fill="#fff"/><circle r="6.5" fill="#2f68b8"/></g>
+<g class="paint" style="transition-delay:.9s"><rect x="18" y="16" width="200" height="40" rx="12" fill="var(--s-card)" stroke="var(--s-faint)"/><text x="34" y="41" font-size="14" fill="var(--s-ink)">このまま</text><text x="204" y="41" text-anchor="end" font-size="16" font-weight="700" fill="var(--s-ink)">48分</text></g>
+<g class="paint" style="transition-delay:1.3s"><rect x="18" y="64" width="200" height="40" rx="12" fill="#c9663f"/><text x="34" y="89" font-size="14" fill="#fff">次のICで降りる</text><text x="204" y="89" text-anchor="end" font-size="16" font-weight="700" fill="#fff">41分</text></g>
+</svg></div>
+    <div class="f-head"><div class="mark big"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><div><p class="verb">車で走る・渋滞を比べる<span class="trial">試作</span></p><h1 class="g-name">KomuMiru<span class="yomi">コムミル</span></h1></div></div>
+    <p class="voice">この渋滞、次で降りたほうが早いのかな？</p>
+    <p class="f-text">KomuMiru は、いくつかの道を同時に計算して、どれがいちばん早く着きそうかを比べて見せるカーナビです。遠回りの分や、右折・信号の多さも差し引いて考えます。</p>
+    <ul class="chips"><li>数分ごとの比べ直し</li><li>「判定」で降りるかどうか</li><li>この先のIC・SA・PAと到着予定</li></ul>
+    <div class="btns"><a class="btn main" href="../navi/">開いてみる</a><a class="btn sub" href="#howto">遊び方</a></div>
+  </section>
 
   <p class="pc-note">パソコンでは、出発前の下調べ（まわりの渋滞の様子や、ルートの比べ方）に使えます。走りながら使うのはスマホです。</p>
 
-  <section>
-    <h2>楽しみ方</h2>
-    <div class="box"><ol class="steps">
-      <li>アプリを開いて位置情報を許可し、目的地を検索して「ナビ開始」を押します。</li>
-      <li>まわりの道が渋滞の色で塗られ、曲がり角を声で案内します。</li>
-      <li>数分ごとに最新の渋滞で計算し直し、早いルートが見つかると声で知らせます。切り替えるかどうかは自分で決められます。</li>
-      <li>渋滞にはまったら（同乗の方が）「判定」を押します。高速の上なら「このまま／次のICで降りる／降りて乗り直す」を、一般道なら「どのICから乗るか」や渋滞を避ける道を比べます。</li>
-    </ol></div>
+  <section class="sec reveal">
+    <p class="kicker">こんな場面で</p>
+    <ol class="moments">
+      <li><p class="m-when">出かける前</p><p class="m-what">目的地を入れて「ナビ開始」。まわりの道が渋滞の色で塗られ、どこが混んでいるか一目で分かる。</p></li>
+      <li><p class="m-when">高速で渋滞に</p><p class="m-what">同乗の人が「判定」を押すと、「このまま／次のICで降りる／降りて乗り直す」を比べて見せる。</p></li>
+      <li><p class="m-when">走っている間</p><p class="m-what">数分ごとに計算し直し、早い道が見つかると声で知らせる。切り替えるかどうかは自分で決める。</p></li>
+    </ol>
   </section>
 
-  <section>
-    <h2>できること</h2>
-    <div class="box"><ul class="plain">
+  <section class="sec reveal" id="howto">
+    <p class="kicker">遊び方</p>
+    <h2 class="sec-title">3つで、はじめられます。</h2>
+    <ol class="steps3">
+      <li><div><b>開いて目的地を決める</b><small>住所・駅名・施設で探せます</small></div></li>
+      <li><div><b>「ナビ開始」を押す</b><small>曲がり角は声で案内します</small></div></li>
+      <li><div><b>迷ったら「判定」</b><small>停車中か、同乗の方が押してください</small></div></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">これから育てるところ</p>
+    <div class="box"><ul class="tags">
+      <li><span class="tag plan">予定</span><span>走った記録と、書き出し・読み込み</span></li>
+      <li><span class="tag plan">予定</span><span>出発時刻をずらしたときの所要時間の比較</span></li>
+      <li><span class="tag plan">予定</span><span>有料道路を使わない場合との比較</span></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" id="more">
+    <p class="kicker">くわしい情報</p>
+    <p class="sec-lead">押すと開きます。</p>
+    <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>まわりのすべての道の渋滞を色で表示</li>
       <li>目的地の検索（住所・駅名・施設）、地図での指定、お気に入り、経由地</li>
       <li>曲がり角の声の案内。ルートを外れたら自動で探し直し</li>
@@ -60,49 +89,38 @@
       <li>ハイウェイモード：この先のIC・JCT・SA・PAと到着予定時刻、その間の渋滞</li>
       <li>ルート上の事故・規制の知らせ</li>
       <li>夜は暗い画面、地図の向き（北が上／進む向きが上／3D）、ホーム画面に追加</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>これから</h2>
-    <div class="box"><ul class="tags">
-      <li><span class="tag plan">予定</span><span>走った記録と、書き出し・読み込み</span></li>
-      <li><span class="tag plan">予定</span><span>出発時刻をずらしたときの所要時間の比較</span></li>
-      <li><span class="tag plan">予定</span><span>有料道路を使わない場合との比較</span></li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>使う端末と許可</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>使う端末と許可</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>スマホ向けです。Android の Chrome で確かめています。</li>
       <li>位置情報：いまどこを走っているかを知り、ルートを計算するために使います。</li>
       <li>画面のスリープ防止：ナビ中に画面が消えないようにします。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>できないこと・ずれること</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>渋滞の情報と所要時間は Mapbox の予測です。実際とずれることがあります。</li>
       <li>高速の出口・入口は、地図データ（OpenStreetMap）から推定しています。載っていないICや新しいICは拾えないことがあります。</li>
       <li>アプリを開いたまま、画面を点けたままでないと位置の更新が止まります。電池を多く使うので、充電しながらの利用をおすすめします。</li>
       <li>SA・PAの駐車場の混み具合や、ガソリンスタンドの営業状況は分かりません。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>記録について</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>記録について</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>登録した出口・お気に入りと設定は、使っている端末の中にだけ保存します。</li>
       <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
-    </ul></div>
+    </ul></div></div></details>
+    <details class="more"><summary>出典</summary><div class="more-body"><p class="note">地図・渋滞・経路・検索：Mapbox／IC・料金所・SA・PA：© OpenStreetMap contributors</p></div></details>
   </section>
 
-  <section>
-    <h2>出典</h2>
-    <p class="note">地図・渋滞・経路・検索：Mapbox／IC・料金所・SA・PA：© OpenStreetMap contributors</p>
-    <div class="btns"><a class="btn main" href="../navi/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  <section class="sec reveal">
+    <div class="btns"><a class="btn main" href="../navi/">KomuMiru を開いてみる</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">ほかのミルも</p>
+    <div class="others">
+      <a class="other app-michi" href="michi.html"><div class="mark small"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><span><b>MichiMiru</b><small>歩く</small></span></a>
+      <a class="other app-megu" href="megu.html"><div class="mark small"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><span><b>MeguMiru</b><small>めぐる</small></span></a>
+      <a class="other app-ten" href="ten.html"><div class="mark small"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><span><b>TenMiru</b><small>見上げる</small></span></a>
+      <a class="other app-yama" href="yama.html"><div class="mark small"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><span><b>YamaMiru</b><small>眺める</small></span></a>
+      <a class="other app-chari" href="chari.html"><div class="mark small">チ</div><span><b>ChariMiru</b><small>自転車で走る</small></span></a>
+    </div>
   </section>
 </main>
 

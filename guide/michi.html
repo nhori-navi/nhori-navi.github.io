@@ -17,40 +17,69 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
+<link rel="stylesheet" href="../top.css?v=5">
+<script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
+<script src="../top.js?v=5" defer></script>
 </head>
-<body class="app-michi">
+<body class="app-michi guide">
 <header class="site"><div class="wrap narrow">
   <a class="back" href=".././">← <span class="series">ミル シリーズ</span></a><span class="badge-trial">楽しく育成中</span>
 </div></header>
 
 <main class="wrap narrow">
-  <div class="hero">
-    <div class="app-title"><div class="mark big"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><h1>MichiMiru<span class="yomi">ミチミル・歩く・道を選んで記録する</span></h1></div>
-    <ul class="scenes">
-      <li>いつもの散歩に、まだ歩いていない道を混ぜられたら</li>
-      <li>歩くたびに、自分だけの地図が塗られていったら</li>
-      <li>「今日はどこを歩こう」を、まかせられたら</li>
-    </ul>
-    <p class="lead">MichiMiru は、自分の好みで道を選ぶ徒歩ナビです。まだ歩いていない道、坂の少ない道、神社やお寺への寄り道。歩いた道は地図に残り、少しずつ自分の地図が塗られていきます。</p>
-    <div class="btns"><a class="btn main" href="../walk/">アプリを開く</a></div>
-  </div>
+
+  <section class="g-hero">
+    <div class="scene michi reveal"><svg viewBox="0 0 500 300" role="img" aria-label="歩いた道のまわりのマスが塗られていく地図">
+<rect width="500" height="300" fill="var(--s-bg)"/><path d="M-10 200 L510 200" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 100 L510 100" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 50 L510 50" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M75 -10 L75 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M175 -10 L175 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M325 -10 L325 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M425 -10 L425 310" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M275 -10 L275 130 Q275 160 245 175 L175 210" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><path d="M-10 262 Q120 250 230 280 T510 262" stroke="var(--s-street)" stroke-width="12" fill="none" stroke-linecap="round"/><rect class="paint" style="transition-delay:0.15s" x="152" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.22s" x="202" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.29s" x="252" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.36s" x="302" y="52" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.43s" x="152" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.50s" x="202" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.57s" x="252" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.64s" x="302" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.71s" x="402" y="102" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.78s" x="52" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:0.85s" x="102" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:0.92s" x="152" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:0.99s" x="302" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.06s" x="352" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.13s" x="402" y="152" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.20s" x="52" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.27s" x="102" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.34s" x="152" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.41s" x="302" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.16"/><rect class="paint" style="transition-delay:1.48s" x="352" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/><rect class="paint" style="transition-delay:1.55s" x="402" y="202" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.38"/><rect class="paint" style="transition-delay:1.62s" x="52" y="252" width="46" height="46" rx="6" fill="#1e8a4c" fill-opacity="0.27"/>
+<path d="M425 150 L425 50 L275 50 L275 100" fill="none" stroke="#5ccf8a" stroke-width="5" stroke-dasharray="2 11" stroke-linecap="round"/>
+<path d="M75 300 L75 200 L175 200 L175 100 L325 100 L325 200 L425 200 L425 150" fill="none" stroke="#1e8a4c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="425" cy="150" r="11" fill="#fff"/><circle cx="425" cy="150" r="7" fill="#1e8a4c"/>
+<g class="paint" style="transition-delay:1.4s"><rect x="18" y="16" width="168" height="34" rx="17" fill="var(--s-card)" stroke="#1e8a4c" stroke-opacity=".35"/><text x="102" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1e8a4c">はじめての道 +1.2km</text></g>
+<g class="paint" style="transition-delay:1.7s"><rect x="18" y="58" width="128" height="30" rx="15" fill="var(--s-card)" stroke="#1e8a4c" stroke-opacity=".35"/><text x="82" y="78" text-anchor="middle" font-size="13" fill="var(--s-ink)">新しいマス +22</text></g>
+</svg></div>
+    <div class="f-head"><div class="mark big"><img src="../walk/icon-192.png" alt="" onerror="this.parentNode.textContent='ミ'"></div><div><p class="verb">歩く・道を選んで記録する</p><h1 class="g-name">MichiMiru<span class="yomi">ミチミル</span></h1></div></div>
+    <p class="voice">え、家の裏にこんな道があったの？</p>
+    <p class="f-text">MichiMiru は、まだ歩いていない道を混ぜてルートを作る徒歩ナビです。坂の少ない道や、神社やお寺への寄り道も選べます。歩いた道は約125m四方のマスで塗られ、自分だけの地図が育っていきます。</p>
+    <ul class="chips"><li>マスの完全制覇</li><li>日本橋から京都へ、バーチャル東海道</li><li>神社・寺・公園のスタンプ帳</li></ul>
+    <div class="btns"><a class="btn main" href="../walk/">開いてみる</a><a class="btn sub" href="#howto">遊び方</a></div>
+  </section>
 
   <p class="pc-note">パソコンでは、ルート作りと、歩いた道・散歩日記・あそぶの画面が使えます。歩いた記録はパソコンの位置が粗いため取れないので、スマホで使ってください。</p>
 
-  <section>
-    <h2>楽しみ方</h2>
-    <div class="box"><ol class="steps">
-      <li>アプリを開いて位置情報を許可します。ルートの画面の「☀ 今日のおすすめ」で、今日の富士山の見え方や、近くのまだ行っていない場所が分かります。</li>
-      <li>「🎲 おまかせで歩く」を押すと、いまいる所から、まだ歩いていない道の多い周回コースがいくつか出ます。目的地へ・ぐるっと周回・電車をはさむ、から選ぶこともできます。</li>
-      <li>歩き始めると、曲がり角を文字と振動で知らせます。道を少し外れても、元のルートに戻る道を探します。</li>
-      <li>歩き終えると、その散歩のまとめが出ます。「あそぶ」では踏破マス・スタンプ帳・バーチャル東海道、「記録」では散歩日記が見られます。</li>
-    </ol></div>
+  <section class="sec reveal">
+    <p class="kicker">こんな場面で</p>
+    <ol class="moments">
+      <li><p class="m-when">週末の朝</p><p class="m-what">「おまかせで歩く」を押すと、まだ歩いていない道の多い周回コースがいくつか出る。いつもの町が、知らない町になる。</p></li>
+      <li><p class="m-when">歩いている途中</p><p class="m-what">曲がり角は、文字と振動で知らせてくれる。道を少し外れても、戻る道を探してくれる。</p></li>
+      <li><p class="m-when">帰ってきたら</p><p class="m-what">散歩のまとめに「はじめての道 1.2km・新しいマス 6」。地図の空白が、また少し埋まる。</p></li>
+    </ol>
   </section>
 
-  <section>
-    <h2>できること</h2>
-    <div class="box"><ul class="plain">
+  <section class="sec reveal" id="howto">
+    <p class="kicker">遊び方</p>
+    <h2 class="sec-title">3つで、はじめられます。</h2>
+    <ol class="steps3">
+      <li><div><b>開いて位置情報をゆるす</b><small>「今日のおすすめ」に、富士山の見え方や近くのまだの場所</small></div></li>
+      <li><div><b>「おまかせで歩く」を押す</b><small>周回・目的地へ・電車をはさむ、からも選べます</small></div></li>
+      <li><div><b>歩いて、まとめを見る</b><small>「あそぶ」でマス・スタンプ帳・バーチャル東海道</small></div></li>
+    </ol>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">これから育てるところ</p>
+    <div class="box"><ul class="tags">
+      <li><span class="tag wip">実装中</span><span>画面を消してポケットに入れたままでも記録が続く、Android のアプリ版</span></li>
+      <li><span class="tag plan">予定</span><span>日差し・雨・人混みを避けるルート</span></li>
+      <li><span class="tag plan">予定</span><span>東海道のあとの、中山道・奥の細道などの長い道のり</span></li>
+      <li><span class="tag plan">予定</span><span>歩数を数える</span></li>
+    </ul></div>
+  </section>
+
+  <section class="sec" id="more">
+    <p class="kicker">くわしい情報</p>
+    <p class="sec-lead">押すと開きます。</p>
+    <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>道の選び方：まだ歩いていない道を優先・坂を避ける（あえて選ぶ）・遊歩道を優先・距離を延ばす</li>
       <li>寄り道：神社・寺・公園、MeguMiru のまだ行っていない場所、完全制覇まであと少しのマス（1〜3か所）</li>
       <li>おまかせ散歩と周回コース（距離の目安・回る向き・いくつかの案から選ぶ）、経由地、地図の長押しで目的地</li>
@@ -61,53 +90,41 @@
       <li>続けたくなる仕掛け：出かけた日の連続日数、週の目標の距離、4つのアプリにまたがるバッジ</li>
       <li>夜は暗い画面、文字の大きさの切り替え、ホーム画面に追加</li>
       <li>記録アプリ（OpenTracks など）の GPX ファイルの読み込み、全部まとめて書き出す・4つのアプリの控え</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>これから</h2>
-    <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span><span>画面を消してポケットに入れたままでも記録が続く、Android のアプリ版</span></li>
-      <li><span class="tag plan">予定</span><span>日差し・雨・人混みを避けるルート</span></li>
-      <li><span class="tag plan">予定</span><span>東海道のあとの、中山道・奥の細道などの長い道のり</span></li>
-      <li><span class="tag plan">予定</span><span>歩数を数える</span></li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>使う端末と許可</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>使う端末と許可</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>スマホ向けです。Android の Chrome で確かめています。iPhone でも動く見込みですが、確かめている途中です。</li>
       <li>位置情報：ルートを作り、歩いた道を記録するために使います。</li>
       <li>向きのセンサー：地図を進む方向に回すために使います。</li>
       <li>振動：曲がり角を知らせるために使います（対応している端末だけ）。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>できないこと・ずれること</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>道のデータは OpenStreetMap（だれでも書き足せる地図）です。地図に載っていない道は選べません。</li>
       <li>歩いた記録は、位置の精度がよいとき（誤差50m以内）だけ残します。ビルの谷間などでは途切れることがあります。</li>
       <li>ウェブアプリなので、画面を消すと記録が止まります。画面を消して歩くときは、記録アプリ（OpenTracks など）で記録して、あとから読み込んでください（アプリ版を準備中です）。</li>
       <li>電車の時刻・運賃・乗り換えは分かりません。</li>
       <li>道のデータは公開のサーバーから受け取るので、混んでいると準備に時間がかかることがあります。いちど読み込んだ場所は30日、端末に保存します。</li>
-    </ul></div>
-  </section>
-
-  <section>
-    <h2>記録について</h2>
-    <div class="box"><ul class="plain">
+    </ul></div></div></details>
+    <details class="more"><summary>記録について</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>歩いた記録・散歩のまとめ・スタンプ帳・お気に入りなどは、使っている端末の中にだけ保存します。</li>
       <li>設定の「全部まとめて書き出す」や「4つのアプリの控え」で、ファイルに控えを取れます。ファイルには歩いた日時と道がすべて入っているので、人に渡さないでください。</li>
       <li>ブラウザの設定で「サイトデータ」を消すと記録も消えます。同じアドレスのほかのミル シリーズのアプリの記録もいっしょに消えるので、ご注意ください。</li>
-    </ul></div>
+    </ul></div></div></details>
+    <details class="more"><summary>出典</summary><div class="more-body"><p class="note">地図：Mapbox／道・神社・寺・公園・名称検索・旧東海道の道筋：© OpenStreetMap contributors（ODbL）／標高・住所検索：国土地理院／駅：国土数値情報（鉄道）国土交通省を加工／市区町村の境目：国土数値情報（行政区域）国土交通省を加工／線路：地球地図日本（国土地理院）を加工／東海道の宿場間の距離：川口市の資料</p></div></details>
   </section>
 
-  <section>
-    <h2>出典</h2>
-    <p class="note">地図：Mapbox／道・神社・寺・公園・名称検索・旧東海道の道筋：© OpenStreetMap contributors（ODbL）／標高・住所検索：国土地理院／駅：国土数値情報（鉄道）国土交通省を加工／市区町村の境目：国土数値情報（行政区域）国土交通省を加工／線路：地球地図日本（国土地理院）を加工／東海道の宿場間の距離：川口市の資料</p>
-    <div class="btns"><a class="btn main" href="../walk/">アプリを開く</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  <section class="sec reveal">
+    <div class="btns"><a class="btn main" href="../walk/">MichiMiru を開いてみる</a><a class="btn sub" href="../">シリーズのTOPへ</a></div>
+  </section>
+
+  <section class="sec reveal">
+    <p class="kicker">ほかのミルも</p>
+    <div class="others">
+      <a class="other app-megu" href="megu.html"><div class="mark small"><img src="../megu/icons/icon-192.png" alt="" onerror="this.parentNode.textContent='メ'"></div><span><b>MeguMiru</b><small>めぐる</small></span></a>
+      <a class="other app-ten" href="ten.html"><div class="mark small"><img src="../sora/icon-192.png" alt="" onerror="this.parentNode.textContent='テ'"></div><span><b>TenMiru</b><small>見上げる</small></span></a>
+      <a class="other app-yama" href="yama.html"><div class="mark small"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><span><b>YamaMiru</b><small>眺める</small></span></a>
+      <a class="other app-komu" href="komu.html"><div class="mark small"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><span><b>KomuMiru</b><small>車で走る</small></span></a>
+      <a class="other app-chari" href="chari.html"><div class="mark small">チ</div><span><b>ChariMiru</b><small>自転車で走る</small></span></a>
+    </div>
   </section>
 </main>
 
