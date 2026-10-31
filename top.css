@@ -159,3 +159,7 @@ details.more .more-body>p{margin:12px 0 0}
 @media (min-width:720px){.others{grid-template-columns:repeat(3,1fr)}.moments{grid-template-columns:repeat(3,1fr)}.moments li{border-left-width:1px;border-top:5px solid var(--app);border-radius:0 0 14px 14px}}
 .scene.komu{--s-bg:#f6efe9}.scene.chari{--s-bg:#eef4f1}
 @media (prefers-color-scheme: dark){.scene.komu{--s-bg:#2a231f}.scene.chari{--s-bg:#1f2826}}
+/* 版6：見出しや短い文を文節の切れ目で折り返す（対応していないブラウザは今まで通り） */
+.th-title,.th-lead,.sec-title,.sec-lead,.voice,.what,.say,.f-text,.chips li,.steps3 b,.steps3 small,.home-tip{word-break:auto-phrase}
+.home-tip{margin:12px 0 0;font-size:14px;line-height:1.7;color:var(--sub)}
+.th-lead .ib{display:inline-block}
