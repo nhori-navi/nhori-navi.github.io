@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="style.css?v=3">
-<link rel="stylesheet" href="top.css?v=6">
+<link rel="stylesheet" href="top.css?v=7">
 <script>document.documentElement.classList.add('js')</script>
 <script src="site.js?v=3" defer></script>
 <script src="top.js?v=5" defer></script>
@@ -168,12 +168,29 @@
     </article>
   </section>
 
+  <section class="sec reveal" id="mirubee">
+    <p class="kicker">ミルビー</p>
+    <h2 class="sec-title">毎朝ひとつ、寄り道のお題。</h2>
+    <div class="mb-grid">
+      <div class="mb-show" aria-hidden="true">
+        <div class="mb-scene"><img class="bg" src="toko/img/bg2.svg" alt=""><img class="bd" src="toko/img/bee_side.svg" alt=""><span class="say">知らない道、歩いてみる？</span></div>
+        <div class="mb-card"><p class="t">🌿 きょうのみちくさ</p><p class="d"><span>近所</span><span class="on">散歩</span><span>遠出</span></p><p class="q">はじめて歩く道を 500m</p><p class="s">歩けば自動で判定・いま <b>320m</b>／500m</p></div>
+      </div>
+      <div>
+        <p class="voice">はじめまして。ハシビロコウのミルビーです。</p>
+        <p class="f-text">毎朝4時に「みちくさ」のお題をひとつ出します。「知らない路地を1本歩く」「空を見上げる」「新しいマスを塗る」……。歩けば自動で判定するものと、できたら自分で押すものがあります。できた回数で、ミルビーは湿地から少しずつ遠くへ出かけていきます。</p>
+        <ul class="chips"><li>毎朝4時に入れ替わる</li><li>近所・散歩・遠出で選べる</li><li>できなかった日も、責めない</li></ul>
+        <div class="btns"><a class="btn main" href="toko/" style="--app:#2f4c53">ミルビーのページを開く</a></div>
+      </div>
+    </div>
+  </section>
+
   <section class="sec reveal" id="keep">
     <p class="kicker">続けるたのしみ</p>
-    <h2 class="sec-title">出かけた日が、つながっていく。</h2>
-    <p class="sec-lead">4つのアプリのどれかで外に出た日が、ひとつの記録になります。記録は MichiMiru の散歩日記にたまっていきます。</p>
+    <h2 class="sec-title">出かけた分だけ、たまっていく。</h2>
+    <p class="sec-lead">歩いた道や距離は MichiMiru の散歩日記に、みちくさの回数はミルビーのページにたまっていきます。「何日続けて」とは数えません。休んだ日のあとも、そのまま続きから。</p>
     <div class="tiles">
-      <div class="tile"><p class="lab">連続で出かけた日</p><p class="num"><span data-count="12">12</span><small>日</small></p><div class="week"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+      <div class="tile tile-bee"><p class="lab">ミルビーのみちくさ</p><p class="num"><span data-count="12">12</span><small>回</small></p><p class="stage">一歩踏み出す</p><img src="toko/img/bee_joy.svg" alt=""></div>
       <div class="tile"><p class="lab">今週の目標</p><p class="num"><span data-count="18.4" data-dec="1">18.4</span><small>/ 25km</small></p><div class="bar"><b data-w="74%"></b></div></div>
       <div class="tile wide"><p class="lab">4つにまたがるバッジ</p><div class="badges"><span class="on app-michi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20 L10 12 L13 14 L15 9" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="6" r="2" fill="#fff"/></svg></span><span class="on app-megu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 C8 3 6 6 6 9 C6 14 12 20 12 20 C12 20 18 14 18 9 C18 6 16 3 12 3 Z" fill="#fff"/><circle cx="12" cy="9" r="2.4" fill="var(--megu)"/></svg></span><span class="on app-ten"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13 L21 8 L19 11 L10 13 L13 18 L11 18 L7 13.6 L4 14.4 Z" fill="#fff"/></svg></span><span class="on app-yama"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 19 L9 8 L13 13 L15 11 L22 19 Z" fill="#fff"/></svg></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="tiny">10個のうち4個。歩く・集める・見上げる・眺める、をつなげると増えていきます。</p></div>
       <div class="tile wide tok app-michi"><p class="lab">バーチャル東海道</p><p class="tokaido-now">日本橋から <b><span data-count="42">42</span>km</b>、戸塚宿のあたり</p><div class="tokaido"><b data-w="8.6%"></b><span class="dot" data-l="8.6%"></span><div class="ends"><span>日本橋</span><span>京都・三条大橋</span></div></div></div>
@@ -201,6 +218,10 @@
   <section class="sec reveal" id="start">
     <p class="kicker">はじめかた</p>
     <h2 class="sec-title">外に出るまで、3つだけ。</h2>
+    <div class="routes">
+      <div class="route"><b>Android の人</b><span>Google Play のアプリ「ミルトコ」で。4つのミルとミルビーが、1つのアプリに入ります。画面を消しても歩いた記録が続きます。</span><em>準備中</em></div>
+      <div class="route"><b>iPhone・パソコンの人</b><span>Web 版で、このまま使えます。上の「開いてみる」から。</span></div>
+    </div>
     <ol class="steps3">
       <li><div><b>アプリを開く</b><small>登録もログインもいりません</small></div></li>
       <li><div><b>位置情報をゆるす</b><small>いる場所から道や空や山を調べます</small></div></li>
@@ -222,9 +243,9 @@
   <p><span class="series">ミル シリーズ</span>は、個人で作っているアプリのシリーズです。</p>
   <p>地図や飛行機などのデータの出典は、各アプリの紹介ページと「ご利用にあたって」にまとめています。</p>
 </div></footer>
-<!-- ミルトコ（版3）：アプリの中で開いたときは毎日使う形に切り替える。Web ではミルビーの紹介の段を足す（中身は toko リポジトリ） -->
-<script src="toko/lib.js?v=3"></script>
-<script src="toko/michikusa.js?v=3"></script>
-<script src="toko/kyou.js?v=3"></script>
+<!-- ミルトコ（版4）：アプリの中で開いたときは毎日使う形に切り替える（中身は toko リポジトリ。消さないこと） -->
+<script src="toko/lib.js?v=4"></script>
+<script src="toko/michikusa.js?v=4"></script>
+<script src="toko/kyou.js?v=4"></script>
 </body>
 </html>
