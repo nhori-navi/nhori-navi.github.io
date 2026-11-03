@@ -1,4 +1,4 @@
-/* ミル シリーズ TOP だけの見た目（v4：2026-10-29 → v8：2026-11-03 つながり・よくある質問・ミルビーの紹介・画面の見本）。共通の見た目は style.css */
+/* ミル シリーズ TOP だけの見た目（v4：2026-10-29 → v9：2026-11-03 つながり・よくある質問・ミルビーの紹介・画面の見本）。共通の見た目は style.css */
 
 /* ── はじめの絵 ── */
 .top-hero{margin:0;position:relative;height:min(92vh,760px);min-height:560px;overflow:hidden;background:#79b0e2;--ink:#1f2a33;--ink2:#1f2a33cc}
@@ -233,14 +233,15 @@ details.more .more-body>p{margin:12px 0 0}
 .season li b{color:var(--app);margin-right:6px}
 @media (min-width:720px){.season{grid-template-columns:repeat(4,1fr)}}
 .stages{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.stages li{position:relative;border-radius:14px;overflow:hidden;background:#dfe9e6;aspect-ratio:3/2.4}
+.stages li{display:flex;flex-direction:column;border-radius:14px;overflow:hidden;background:#fffdf4;border:1px solid #e6dfc8}
+.stages .pic{position:relative;display:block;aspect-ratio:3/2;overflow:hidden;background:#dfe9e6}
 .stages .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.stages .bd{position:absolute;right:6%;bottom:22%;height:62%}
-.stages .bd.tilt{transform:rotate(-7deg);transform-origin:50% 100%}
-.stages .cap{position:absolute;left:0;right:0;bottom:0;background:rgba(255,253,244,.92);color:#1f2b2a;font-size:12px;line-height:1.45;padding:5px 10px}
+.stages .bd{position:absolute;left:50%;bottom:5%;height:84%;transform:translateX(-50%)}
+.stages .bd.tilt{transform:translateX(-50%) rotate(-7deg);transform-origin:50% 100%}
+.stages .cap{display:block;color:#1f2b2a;font-size:12px;line-height:1.45;padding:7px 10px 9px}
 .stages .cap b{display:block;font-size:14px}
-@media (min-width:720px){.stages{grid-template-columns:repeat(5,1fr)}}
-@media (prefers-color-scheme: dark){.stages .bg{filter:brightness(.8)}.stages .cap{background:rgba(38,43,41,.92);color:#eef1ef}}
+@media (min-width:720px){.stages{grid-template-columns:repeat(5,1fr)}.stages .cap b{font-size:13px}}
+@media (prefers-color-scheme: dark){.stages li{background:#262b29;border-color:#3d4642}.stages .bg{filter:brightness(.8)}.stages .cap{color:#eef1ef}}
 .shelf3{display:grid;gap:10px}
 .shelf3 .sh{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
 .shelf3 .sh b{display:block;font-size:16px}
