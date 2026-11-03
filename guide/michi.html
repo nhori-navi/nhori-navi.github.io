@@ -17,7 +17,7 @@
 <link rel="icon" type="image/png" href="../favicon-48.png">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="../style.css?v=3">
-<link rel="stylesheet" href="../top.css?v=7">
+<link rel="stylesheet" href="../top.css?v=8">
 <script>document.documentElement.classList.add('js')</script>
 <script src="../site.js?v=3" defer></script>
 <script src="../top.js?v=5" defer></script>
@@ -70,7 +70,7 @@
   <section class="sec reveal">
     <p class="kicker">これから育てるところ</p>
     <div class="box"><ul class="tags">
-      <li><span class="tag wip">実装中</span><span>画面を消してポケットに入れたままでも記録が続く、Android のアプリ版</span></li>
+      <li><span class="tag wip">実装中</span><span>画面を消してポケットに入れたままでも記録が続く、Android アプリ「ミルトコ」（作者のスマホで試している段階）</span></li>
       <li><span class="tag plan">予定</span><span>日差し・雨・人混みを避けるルート</span></li>
       <li><span class="tag plan">予定</span><span>東海道のあとの、中山道・奥の細道などの長い道のり</span></li>
       <li><span class="tag plan">予定</span><span>歩数を数える</span></li>
@@ -81,6 +81,8 @@
     <p class="kicker">くわしい情報</p>
     <p class="sec-lead">押すと開きます。</p>
     <details class="more"><summary>できること</summary><div class="more-body"><div class="box"><ul class="plain">
+      <li>歩くだけで、ミルビーの「きょうのみちくさ」（新しいマス・はじめての道・いつもより長く・神社や公園への寄り道）が自動で判定される</li>
+      <li>Android アプリ「ミルトコ」（準備中）では、散歩中に真上を通りそうな飛行機を知らせ、通知を押すと方角と真上までの残り時間が出る「見上げカード」</li>
       <li>道の選び方：まだ歩いていない道を優先・坂を避ける（あえて選ぶ）・遊歩道を優先・距離を延ばす</li>
       <li>寄り道：神社・寺・公園、MeguMiru のまだ行っていない場所、完全制覇まであと少しのマス（1〜3か所）</li>
       <li>おまかせ散歩と周回コース（距離の目安・回る向き・いくつかの案から選ぶ）、経由地、地図の長押しで目的地</li>
@@ -101,7 +103,7 @@
     <details class="more"><summary>できないこと・ずれること</summary><div class="more-body"><div class="box"><ul class="plain">
       <li>道のデータは OpenStreetMap（だれでも書き足せる地図）です。地図に載っていない道は選べません。</li>
       <li>歩いた記録は、位置の精度がよいとき（誤差50m以内）だけ残します。ビルの谷間などでは途切れることがあります。</li>
-      <li>ウェブアプリなので、画面を消すと記録が止まります。画面を消して歩くときは、記録アプリ（OpenTracks など）で記録して、あとから読み込んでください（アプリ版を準備中です）。</li>
+      <li>Web 版では、画面を消すと記録が止まります。画面を消して歩くときは、記録アプリ（OpenTracks など）で記録して、あとから読み込んでください（Android アプリ「ミルトコ」では、画面を消しても記録が続きます。準備中）。</li>
       <li>電車の時刻・運賃・乗り換えは分かりません。</li>
       <li>道のデータは公開のサーバーから受け取るので、混んでいると準備に時間がかかることがあります。いちど読み込んだ場所は30日、端末に保存します。</li>
     </ul></div></div></details>
@@ -125,6 +127,7 @@
       <a class="other app-yama" href="yama.html"><div class="mark small"><img src="../yama/icon-192.png" alt="" onerror="this.parentNode.textContent='ヤ'"></div><span><b>YamaMiru</b><small>眺める</small></span></a>
       <a class="other app-komu" href="komu.html"><div class="mark small"><img src="../navi/icon-192.png" alt="" onerror="this.parentNode.textContent='コ'"></div><span><b>KomuMiru</b><small>車で走る</small></span></a>
       <a class="other app-chari" href="chari.html"><div class="mark small"><img src="../chari/icon-192.png" alt="" onerror="this.parentNode.textContent='チ'"></div><span><b>ChariMiru</b><small>自転車で走る</small></span></a>
+      <a class="other app-bee" href="mirubee.html"><div class="mark small" style="background:#2f4c53"><img src="../toko/img/icon.svg" alt="" onerror="this.parentNode.textContent='ビ'"></div><span><b>ミルビー</b><small>毎朝のお題</small></span></a>
     </div>
   </section>
 </main>
