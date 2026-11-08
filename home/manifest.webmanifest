@@ -1,0 +1,16 @@
+{
+  "name": "ミル シリーズ",
+  "short_name": "ミルシリーズ",
+  "id": "/home/",
+  "start_url": "./?home=1",
+  "scope": "./",
+  "display": "standalone",
+  "lang": "ja",
+  "background_color": "#faf8f4",
+  "theme_color": "#79b0e2",
+  "icons": [
+    { "src": "../icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "../icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "../icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
